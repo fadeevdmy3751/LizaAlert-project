@@ -8,6 +8,7 @@ const buttonCourses = document.querySelector('.header__button-courses');
 const buttonClean = document.querySelector('.filters__remove');
 const buttonsDeleteTag = document.querySelectorAll('.tag__delete');
 const levelFilter = document.getElementsByName('level')
+const statusFilter = document.getElementsByName('status')
 const activeChk = document.querySelector('#active');
 const inactiveChk = document.querySelector('#not-active');
 
@@ -48,7 +49,7 @@ inputs.forEach((item) => {
     const currentCategory = item.dataset.filter;
     // filter(currentCategory, cards);
     // функционал по актуализации данных в масииве initialFilters
-    // запуск renderCard()
+    // запуск renderCards()
     checkButtonClean();
   });
 });
@@ -150,6 +151,7 @@ function checkButtonClean() {
 }
 
 function cardStatusChanged(button, title) {
+  console.log(button, typeof button);//todo
   // найти карточку с нужным title
   // заменить статус
   // внести изменение в массив
@@ -165,10 +167,10 @@ function createCard (obj) {
   newCard.querySelector(".card__description").textContent = obj.text;
   newCard.querySelector(".card__lessons").textContent = obj.lessonsAmount;
   newCard.querySelector(".card__clock").textContent = obj.duration;
+  newCard.initObject = obj;
   const button = newCard.querySelector(".card__button");
   button.textContent = obj.status;
   button.setAttribute('onclick', `cardStatusChanged(this, '${obj.title}')`)
-
   switch (obj.status) {
     case available:
       button.classList.add('card__button_style_available');
@@ -186,7 +188,7 @@ function createCard (obj) {
 
 }
 
-function renderCard() {
+function renderCards() {
   cardsContainer.innerHTML = '';
   initialCards.forEach(el => {
     const newCard = createCard(el);
@@ -206,5 +208,5 @@ function renderCard() {
   });
 }
 
-renderCard();
+renderCards();
 
