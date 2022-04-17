@@ -7,7 +7,7 @@ const buttonProfile = document.querySelector('.header__button-profile');
 const buttonCourses = document.querySelector('.header__button-courses');
 const buttonClean = document.querySelector('.filters__remove');
 const buttonsDeleteTag = document.querySelectorAll('.tag__delete');
-
+const levelFilter = document.getElementsByName('level')
 const activeChk = document.querySelector('#active');
 const inactiveChk = document.querySelector('#not-active');
 
@@ -16,12 +16,12 @@ const inactiveChk = document.querySelector('#not-active');
 filters.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     evt.target.classList.toggle('filters__category_active');
-    let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
+    const panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
   })
 })
 
@@ -43,6 +43,8 @@ inputs.forEach((item) => {
   item.addEventListener("click", (el) => {
     if (el.target.id === 'active' && el.target.checked === true) inactiveChk.checked = false;
     if (el.target.id === 'not-active' && el.target.checked === true) activeChk.checked = false;
+    if ([...levelFilter].filter(e => e.checked).length == 3)
+      levelFilter.forEach(e => e.checked = false)
     const currentCategory = item.dataset.filter;
     // filter(currentCategory, cards);
     // функционал по актуализации данных в масииве initialFilters
@@ -108,19 +110,16 @@ buttonCourses.addEventListener('click', function () {
 )
 
 // кнопка очистить
-
-function removeFilters() {
+function cleanFilters() {
   inputs.forEach(function(el) {
     el.checked = false;
     checkButtonClean();
   });
   showTags();
 }
-
-buttonClean.addEventListener('click', removeFilters)
+buttonClean.addEventListener('click', cleanFilters)
 
 // кнопка тэга удалить
-
 function deleteTags(tag) {
   if (tag.classList.contains('tag-novice')) {
     document.querySelector('#novice').checked = false;
