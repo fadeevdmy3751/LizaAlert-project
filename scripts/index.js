@@ -1,6 +1,6 @@
 const filters = document.querySelectorAll ('.filters__category');
 const inputs = document.querySelectorAll('.filters__input') // все чекбоксы
-const cards = document.querySelectorAll('.card') // gone down to cards
+// const cards = document.querySelectorAll('.card') // gone down to cards
 const cardsTemplate = document.querySelector(".cards-template");
 const cardsContainer = document.querySelector(".cards-list");
 const buttonProfile = document.querySelector('.header__button-profile');
@@ -147,7 +147,9 @@ buttonsDeleteTag.forEach(function (item) {
 // состояние кнопки очистить
 
 function checkButtonClean() {
+  //todo rename с учетом renderCards
   buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
+  renderCards();
 }
 
 function cardStatusChanged(button, title) {
@@ -158,15 +160,17 @@ function cardStatusChanged(button, title) {
 }
 
 function createCard (obj) {
-  const newCard = cardsTemplate.content.cloneNode(true);
+  // const newCard = cardsTemplate.content.cloneNode(true);
+  const newCard = cardsTemplate.content.querySelector('.card').cloneNode(true);
 
   newCard.querySelector(".card__image").src = obj.img;
   newCard.querySelector(".card__image").alt = obj.imgAlt;
   newCard.querySelector(".card__title").textContent = obj.title;
-  newCard.querySelector(".card__status").textContent = obj.level;
+  newCard.querySelector(".card__level").textContent = obj.level;
   newCard.querySelector(".card__description").textContent = obj.text;
   newCard.querySelector(".card__lessons").textContent = obj.lessonsAmount;
   newCard.querySelector(".card__clock").textContent = obj.duration;
+  //todo
   newCard.initObject = obj;
   const button = newCard.querySelector(".card__button");
   button.textContent = obj.status;
@@ -182,16 +186,30 @@ function createCard (obj) {
       button.classList.add('card__button_style_completed');
       button.state='disabled'
   }
-  // setListenerCards(newCard);
-
   return newCard;
-
 }
 
+const cards = [];
+initialCards.forEach(el => cards.push(createCard(el)))
+
 function renderCards() {
-  cardsContainer.innerHTML = '';
-  initialCards.forEach(el => {
-    const newCard = createCard(el);
+  // cardsContainer.innerHTML = '';
+  while (cardsContainer.firstChild)
+    cardsContainer.removeChild(cardsContainer.lastChild);
+  let cardsToRender = [];
+  let checkedLevels = [...levelFilter].filter(e => e.checked).map(e => e.dataset.filter);
+  if (checkedLevels.length) // какието галки стоят на уровень
+  {
+    cardsToRender = cards.filter(e => checkedLevels.includes(e.initObject.level));
+  }
+  else
+    cardsToRender = cards;
+  //a = a.concat(b)
+
+//todo второй фильр 
+
+  // initialCards.forEach(el => {
+  //   const newCard = createCard(el);
     // console.log(newCard);
     // получаем текущее актуальное состояние фильтров
     // т.к. обращение к initialFilters[levelFilters, statusFilters]
@@ -204,8 +222,8 @@ function renderCards() {
     //
     // те фильтры, которые работают -> сверка с итерируемой карточкой
     //  if
-    cardsContainer.append(newCard);
-  });
+    cardsContainer.append(...cardsToRender);
+  // });
 }
 
 renderCards();
