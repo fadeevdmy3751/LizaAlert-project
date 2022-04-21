@@ -1,0 +1,7 @@
+.content {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "account-overview personal-data profile-info"
+    ". account-data profile-info";
+}
