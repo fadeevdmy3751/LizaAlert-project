@@ -3,6 +3,12 @@
 
 @import url(../common.blocks/page/page.css);
 @import url(../common.blocks/header/header.css);
+@import url(../common.blocks/header/__logo/header__logo.css);
+@import url(../common.blocks/header/__nav/header__nav.css);
+@import url(../common.blocks/header/__button-courses/header__button-courses.css);
+@import url(../common.blocks/header/__button-courses/_active/header__button-courses_active.css);
+@import url(../common.blocks/header/__button-profile/header__button-profile.css);
+@import url(../common.blocks/header/__button-profile/_active/header__button-profile_active.css);
 @import url(../common.blocks/title/title.css);
 
 @import url(../index.blocks/filters/filters.css);

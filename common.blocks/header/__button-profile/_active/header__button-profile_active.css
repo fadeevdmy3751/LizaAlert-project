@@ -1,0 +1,14 @@
+.header__button-profile_active {
+  background-image: url(../../../../images/button-profile_active.svg);
+  width: 113px;
+  height: 24px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0;
+}
+
+.header__button-profile_active:hover {
+  cursor: pointer;
+}
