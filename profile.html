@@ -20,6 +20,47 @@
   </header>
   <main class="profile-content">
 
+    <section class="profile-account">
+      <img class="profile-account__avatar" src="./images/img-avatar.jpg" alt="Фотография пользователя">
+      <p class="profile-account__name">Иванова Анна Сидоровна</p>
+      <ul class="profile-account__status">
+        <li class="profile-account__status-item">
+          <img class="profile-account__icon" src="./images/icon-status.svg" alt="#">
+          <p class="profile-account__text">Профессионал</p>
+        </li>
+        <li class="profile-account__status-item">
+          <img class="profile-account__icon" src="./images/icon-badge.svg" alt="#">
+          <p class="profile-account__text">Картограф</p>
+        </li>
+        <li class="profile-account__status-item">
+          <img class="profile-account__icon" src="./images/icon-courses.svg" alt="#">
+          <p class="profile-account__text">Пройдено 2 курса</p>
+        </li>
+      </ul>
+      <button class="profile-account__button-exit" type="button">
+        <img class="profile-account__button-icon" src="./images/icon-exit.svg" alt="#">
+        <p class="profile-account__button-text">Выйти из аккаунта</p>
+      </button>
+    </section>
+
+    <div class="form-container">
+      <form action="post" class="form">
+        <h2 class="form__title">Личные данные</h2>
+        <fieldset class="form__fieldset">
+          <label for="full-name" class="form__label">ФИО</label>
+          <input type="text" class="form__input form__input_type_edit" id="full-name">
+          <label for="birth-date" class="form__label">Дата рождения</label>
+          <input type="date" class="form__input form__input_type_edit" id="birth-date">
+          <label for="region" class="form__label">Географический регион</label>
+          <input type="text" class="form__input form__input_type_edit" id="region">
+          <label for="nickname" class="form__label">Позывной на форуме</label>
+          <input type="text" class="form__input form__input_type_edit" id="nickname">
+          <label for="photo" class="form__label">Фото</label>
+          <input type="file" disabled class="form__input form__input_type_attach" accept="image/jpeg" id="photo">
+          <button class="form__submit-btn" type="submit">Сохранить&nbsp;изменения</button>
+        </fieldset>
+      </form>
+    </div>
   </main>
 </body>
 </html>

@@ -1,0 +1,9 @@
+.profile-account {
+  grid-area: profile-account;
+  margin: 32px 0 0 60px;
+  background-color: #FFFFFF;
+  max-width: 312px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+}

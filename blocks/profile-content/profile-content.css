@@ -1,7 +1,10 @@
 .profile-content {
+  max-width: 1320px;
+  margin: 0 auto;
   display: grid;
+  gap: 24px;
   grid-template-areas:
-    "title"
-    "account-overview profile-data profile-text"
+    "title title title"
+    "profile-account profile-data profile-text"
     ". profile-data profile-text";
 }

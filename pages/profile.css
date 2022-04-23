@@ -11,7 +11,27 @@
 @import url(../blocks/header/__button-profile/header__button-profile.css);
 @import url(../blocks/header/__button-profile/_active/header__button-profile_active.css);
 
-@import url(../blocks/account-overview/account-overview.css);
+@import url(../blocks/profile-account/profile-account.css);
+@import url(../blocks/profile-account/__avatar/profile-account__avatar.css);
+@import url(../blocks/profile-account/__name/profile-account__name.css);
+@import url(../blocks/profile-account/__status/profile-account__status.css);
+@import url(../blocks/profile-account/__status-item/profile-account__status-item.css);
+@import url(../blocks/profile-account/__icon/profile-account__icon.css);
+@import url(../blocks/profile-account/__text/profile-account__text.css);
+@import url(../blocks/profile-account/__button-exit/profile-account__button-exit.css);
+@import url(../blocks/profile-account/__button-icon/profile-account__button-icon.css);
+@import url(../blocks/profile-account/__button-text/profile-account__button-text.css);
 @import url(../blocks/profile-data/profile-data.css);
 @import url(../blocks/profile-text/profile-text.css);
 @import url(../blocks/profile-content/profile-content.css);
+
+/* ================================Form================================ */
+@import url(../blocks/form-container/form-container.css);
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__title/form__title.css);
+@import url(../blocks/form/__fieldset/form__fieldset.css);
+@import url(../blocks/form/__label/form__label.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input/_type/form__input_type_edit.css);
+@import url(../blocks/form/__input/_type/form__input_type_attach.css);
+@import url(../blocks/form/__submit-btn/form__submit-btn.css);
