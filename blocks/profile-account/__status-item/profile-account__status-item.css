@@ -1,0 +1,4 @@
+.profile-account__status-item {
+  display: flex;
+  flex-direction: row;
+}

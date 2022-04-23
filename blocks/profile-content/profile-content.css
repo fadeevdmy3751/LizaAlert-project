@@ -1,7 +1,7 @@
 .profile-content {
   display: grid;
   grid-template-areas:
-    "title"
-    "account-overview profile-data profile-text"
+    "title title title"
+    "profile-account profile-data profile-text"
     ". profile-data profile-text";
 }
