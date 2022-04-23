@@ -1,4 +1,6 @@
 const filters = document.querySelectorAll ('.filter');
+const inputs = document.querySelectorAll('.filter__input')
+const cards = document.querySelectorAll('.card')
 
 // аккордион отркрывается-закрывается
 filters.forEach(function (item) {
@@ -14,26 +16,23 @@ filters.forEach(function (item) {
 });
 
 function filterCards() {
-const checkboxes = document.querySelectorAll('.filter__input')
-const cards = document.querySelectorAll('.card')
-
-function filter (category, items) {
-  items.forEach((item) => {
+  function filter (category, cards) {
+  cards.forEach((card) => {
     // проверяем категорию
-    const isItemFiltered = !item.classList.contains(category)
+    const isItemFiltered = !card.classList.contains(category)
     // если категории нет,прячем
     if (isItemFiltered) {
-      item.classList.add('hide')
+      card.classList.add('hide')
 // удаляем класс hide
       } else {
-        item.classList.remove('hide')
+        card.classList.remove('hide')
     }
-  })
+  });
 }
 
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("click", () => {
-    const currentCategory = checkbox.dataset.filter;
+inputs.forEach((item) => {
+  item.addEventListener("click", () => {
+    const currentCategory = item.dataset.filter;
     filter(currentCategory, cards);
   });
 });
