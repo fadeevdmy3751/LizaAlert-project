@@ -1,0 +1,5 @@
+.filter__tags {
+  margin: 32px;
+  display: none;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,7 @@
+.filter__list {
+  display: block;
+  width: 248px;
+  padding: 0;
+  margin: 0 auto 28px;
+  list-style: none;
+}

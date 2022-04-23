@@ -1,0 +1,35 @@
+.filter__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filter__input+.filter__label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.filter__input+.filter__label::before {
+  content: url(../../../images/check-box.svg);
+  margin-right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.filter__input:checked+.filter__label::before {
+  content: url(../../../images/check.svg);
+  color: #F06000;
+}
+
+.filter__input:checked+.filter__label {
+  color: #F06000;
+}
+
+.custom-checkbox:not(:disabled):not(:checked)+.filter__label:hover::before {
+  cursor: pointer;
+}
+
+

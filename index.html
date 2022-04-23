@@ -19,7 +19,54 @@
     </nav>
   </header>
   <main class="index-content">
-
+    <div class="filters">
+      <p class="filters__heading">Фильтры</p>
+      <button class="filters__reset" type="button" aria-label="Очистить">Очистить</button>
+      <button class="filter">Категория</button>
+      <div class="filter__panel"></div>
+      <button class="filter">Тематика</button>
+      <div class="filter__panel"></div>
+      <button class="filter">Уровень</button>
+      <div class="filter__panel">
+        <ul class="filter__list">
+          <li class="filter__item">
+            <input type="checkbox" name="level" id="novice" class="filter__input" value="novice" data-filter="novice">
+            <label for="novice" class="filter__label">Новичок</label>
+          </li>
+          <li class="filter__item">
+            <input type="checkbox" name="level" id="experienced" class="filter__input" value="experienced" data-filter="experienced">
+            <label for="experienced" class="filter__label">Бывалый</label>
+          </li>
+          <li class="filter__item">
+            <input type="checkbox" name="level" id="professional" class="filter__input" value="professional" data-filter="professional">
+            <label for="professional" class="filter__label">Профессионал</label>
+          </li>
+        </ul>
+      </div>
+      <button class="filter">Статус</button>
+      <div class="filter__panel">
+        <ul class="filter__list">
+          <li class="filter__item">
+            <input type="checkbox" name="status" id="not-active" class="filter__input" value="not-active">
+            <label for="not-active" class="filter__label">Не активный</label>
+          </li>
+          <li class="filter__item">
+            <input type="checkbox" name="status" id="registered" class="filter__input" value="registered">
+            <label for="registered" class="filter__label">Вы записаны</label>
+          </li>
+          <li class="filter__item">
+            <input type="checkbox" name="status" id="active" class="filter__input" value="active">
+            <label for="active" class="filter__label">Активный</label>
+          </li>
+          <li class="filter__item">
+            <input type="checkbox" name="status" id="completed" class="filter__input" value="completed">
+            <label for="completed" class="filter__label">Пройден</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tags"></div>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>

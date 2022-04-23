@@ -15,3 +15,15 @@
 @import url(../blocks/cards-list/cards-list.css);
 @import url(../blocks/index-content/index-content.css);
 
+@import url(../blocks/filters/filters.css);
+@import url(../blocks/filters/__heading/filters__heading.css);
+@import url(../blocks/filters/__reset/filters__reset.css);
+@import url(../blocks/filter/filter.css);
+@import url(../blocks/filter/_active/filter_active.css);
+@import url(../blocks/filter/__panel/filter__panel.css);
+@import url(../blocks/filter/__list/filter__list.css);
+@import url(../blocks/filter/__label/filter__label.css);
+@import url(../blocks/filter/__input/filter__input.css);
+
+@import url(../blocks/filter/__item/filter__item.css);
+@import url(../blocks/filter/__button/filter__button.css);
