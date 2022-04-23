@@ -24,6 +24,6 @@
 @import url(../blocks/filter/__list/filter__list.css);
 @import url(../blocks/filter/__label/filter__label.css);
 @import url(../blocks/filter/__input/filter__input.css);
-
 @import url(../blocks/filter/__item/filter__item.css);
-@import url(../blocks/filter/__button/filter__button.css);
+
+@import url(../blocks/hide/hide.css);
