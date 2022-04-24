@@ -6,5 +6,5 @@
   grid-template-areas:
     "title title title"
     "profile-account profile-data profile-text-personal-data"
-    ". profile-data profile-text";
+    ". account-data profile-text-account";
 }

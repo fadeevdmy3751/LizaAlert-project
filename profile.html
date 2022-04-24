@@ -43,14 +43,14 @@
       </button>
     </section>
 
-    <div class="form-container">
+    <div class="form-container form-container_place_profile-data">
       <form action="post" class="form">
         <h2 class="form__title">Личные данные</h2>
         <fieldset class="form__fieldset">
           <label for="full-name" class="form__label">ФИО</label>
           <input type="text" class="form__input form__input_type_edit" id="full-name">
           <label for="birth-date" class="form__label">Дата рождения</label>
-          <input type="date" class="form__input form__input_type_edit" id="birth-date" placeholder="asdasd">
+          <input type="date" class="form__input form__input_type_edit" id="birth-date">
           <label for="region" class="form__label">Географический регион</label>
           <input type="text" class="form__input form__input_type_edit" id="region">
           <label for="nickname" class="form__label">Позывной на форуме</label>
@@ -73,6 +73,33 @@
         <li class="text-tips__list-item">разрешение не&nbsp;менее 640&times;640px</li>
         <li class="text-tips__list-item">размер не&nbsp;более 3&nbsp;МБ</li>
       </ul>
+    </div>
+
+    <div class="form-container form-container_place_account-data">
+      <form action="post" class="form">
+        <h2 class="form__title">Аккаунт</h2>
+        <fieldset class="form__fieldset">
+          <label for="phone-number" class="form__label">Номер телефона</label>
+          <input type="tel" class="form__input" id="phone-number">
+          <label for="email" class="form__label">Email</label>
+          <input type="email" class="form__input form__input_type_edit" id="email">
+          <label for="password" class="form__label">Пароль</label>
+          <input type="password" class="form__input form__input_type_edit" id="password">
+          <button class="form__submit-btn" type="submit">Сохранить&nbsp;изменения</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="text-tips text-tips_place_account">
+      <p class="text-tips__paragraph">
+        Номер телефона используется как уникальный идентификатор
+        пользователя, поэтому его нельзя поменять вручную
+      </p>
+      <p class="text-tips__paragraph">
+        Если по&nbsp;какой-то причине у&nbsp;вас нет доступа к&nbsp;номеру телефона,
+        на&nbsp;который вы&nbsp;зарегистрировали аккаунт, напишите в&nbsp;поддержку
+      </p>
+      <p class="text-tips__paragraph">Email нужен для восстановления пароля</p>
     </div>
 
   </main>
