@@ -66,7 +66,58 @@
       </div>
     </div>
     <div class="tags"></div>
+    <section class="cards-elements">
+      <ol class="cards">
+        <!-- пример карточки. после удалить -->
+        <li class="card">
+    
+          <img class="card__image" src="./images/dog.png" alt="Кинологическое направление">
+    
+          <div class="card__texts">
+            <h2 class="card__title">Кинологическое направление</h2>
+            <span class="card__status">Бывалый</span>
+            <p class="card__subtitle">Поисково-спасательная работа, следовая работа, а так же поиск тел погибших с помощью собак</p>
+          </div>
+        
+          <div class="card__options">
+            <div class="card__lessons-info">
+              <img class="card__book-img" alt="книга" src="./images/book.svg">
+              <p class="card__lessons">144 занятия</p>
+            </div>
+            <div class="card__clock-info">
+              <img class="card__clock-img" alt="часы" src="./images/clock.svg">
+              <p class="card__clock">144 ч</p>
+            </div>
+            <button class="card__button">Продолжить</button> <!-- в зависимости от статуса кнопки дменять class= "button_white button_orange button_grey" -->
+          </div>
+        </li>
+      </ol>
+    </section>
   </main>
+  <template class="cards-template">
+    <li class="card">
+
+      <img class="card__image" src="" alt="">
+
+      <div class="card__texts">
+        <h2 class="card__title"></h2>
+        <span class="card__status"></span>
+        <p class="card__description"></p>
+      </div>
+  
+      <div class="card__options">
+        <div class="card__lessons-info">
+          <img class="card__book-img" alt="иконка книга" src="./images/book.svg">
+          <p class="card__lessons"></p>
+        </div>
+        <div class="card__clock-info">
+          <img class="card__clock-img" alt="иконка часы" src="./images/clock.svg">
+          <p class="card__clock"></p>
+        </div>
+        <button class="card__button"></button> <!-- в зависимости от статуса кнопки дменять class= "button_white button_orange button_grey" -->
+      </div>
+    </li>
+  </template>
   <script src="index.js"></script>
 </body>
 </html>
