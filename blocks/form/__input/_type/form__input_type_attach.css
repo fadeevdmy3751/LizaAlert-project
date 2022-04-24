@@ -1,0 +1,12 @@
+.form__input_type_attach {
+  color: transparent;
+  background-image: url(../../../../images/icon-form_attach.svg);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+}
+
+.form__input_type_attach:focus {
+  color: #212329
+}
+

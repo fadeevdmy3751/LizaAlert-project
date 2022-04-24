@@ -13,3 +13,11 @@
 .form__input:focus {
   border: 1.2px solid #FF6600;
 }
+
+.form__input::file-selector-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
