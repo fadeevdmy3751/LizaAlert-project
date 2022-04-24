@@ -26,6 +26,7 @@
 @import url(../blocks/profile-content/profile-content.css);
 
 /* ================================Form================================ */
+
 @import url(../blocks/form-container/form-container.css);
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__title/form__title.css);
@@ -35,3 +36,10 @@
 @import url(../blocks/form/__input/_type/form__input_type_edit.css);
 @import url(../blocks/form/__input/_type/form__input_type_attach.css);
 @import url(../blocks/form/__submit-btn/form__submit-btn.css);
+
+/* ================================Text-block================================ */
+@import url(../blocks/text-tips/text-tips.css);
+@import url(../blocks/text-tips/_place/text-tips_place_personal-data.css);
+@import url(../blocks/text-tips/__paragraph/text-tips__paragraph.css);
+@import url(../blocks/text-tips/__list/text-tips__list.css);
+@import url(../blocks/text-tips/__list-item/text-tips__list-item.css);

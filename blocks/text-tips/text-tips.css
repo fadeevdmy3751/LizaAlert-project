@@ -1,0 +1,11 @@
+.text-tips {
+  max-width: 312px;
+  width: 100%;
+  background: transparent;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #9397A3;
+  display: flex;
+  flex-direction: column;
+}
