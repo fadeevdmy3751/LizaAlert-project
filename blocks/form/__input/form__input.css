@@ -19,5 +19,22 @@
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
+  opacity: 0;
+}
+
+.form__input::placeholder {
+  color: #9397A3;
+  ;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #9397A3;
+}
+
+.form__input::-moz-placeholder {
+  color: #9397A3;
+}
+
+.form__input::-ms-input-placeholder {
+  color: #9397A3;
 }

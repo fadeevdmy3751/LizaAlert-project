@@ -56,8 +56,8 @@
           <label for="nickname" class="form__label">Позывной на форуме</label>
           <input type="text" class="form__input form__input_type_edit" id="nickname">
           <label for="photo" class="form__label">Фото</label>
-          <input type="file"  class="form__input form__input_type_attach" accept="image/jpeg" id="photo">
-          <button class="form__submit-btn" type="submit">Сохранить&nbsp;изменения</button>
+          <input type="file" disabled class="form__input form__input_type_attach" accept="image/jpeg" id="photo">
+          <button class="form__submit-btn form__submit-btn_type_unsubmitted" type="submit">Сохранить&nbsp;изменения</button>
         </fieldset>
       </form>
     </div>
@@ -80,12 +80,12 @@
         <h2 class="form__title">Аккаунт</h2>
         <fieldset class="form__fieldset">
           <label for="phone-number" class="form__label">Номер телефона</label>
-          <input type="tel" class="form__input" id="phone-number">
+          <input type="tel" class="form__input" id="phone-number" placeholder="+7 123 456 78 90">
           <label for="email" class="form__label">Email</label>
           <input type="email" class="form__input form__input_type_edit" id="email">
           <label for="password" class="form__label">Пароль</label>
           <input type="password" class="form__input form__input_type_edit" id="password">
-          <button class="form__submit-btn" type="submit">Сохранить&nbsp;изменения</button>
+          <button class="form__submit-btn form__submit-btn_type_unsubmitted" type="submit">Сохранить&nbsp;изменения</button>
         </fieldset>
       </form>
     </div>
