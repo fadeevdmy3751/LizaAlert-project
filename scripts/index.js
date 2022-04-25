@@ -1,9 +1,6 @@
 const filters = document.querySelectorAll ('.filter');
 const inputs = document.querySelectorAll('.filter__input')
 const cards = document.querySelectorAll('.card')
-const tagNovice = document.querySelector ('.tag-novice')
-const tagExperienced = document.querySelector ('.tag-experienced')
-const tagProfessional = document.querySelector ('.tag-professional')
 
 // аккордион отркрывается-закрывается
 
@@ -50,21 +47,22 @@ filterCards();
 
 function tags() {
   if (document.querySelector('#novice').checked) {
-    tagNovice.classList.add('show');
+    document.querySelector('.tag-novice').classList.add('show');
   } else if (document.querySelector('#experienced').checked) {
-    tagExperienced.classList.add('show');
+    document.querySelector('.tag-experienced').classList.add('show');
   } else if (document.querySelector('#professional').checked) {
-    tagProfessional.classList.add('show');
+    document.querySelector('.tag-professional').classList.add('show');
   } else {
-    tagNovice.classList.remove('show');
-    tagExperienced.classList.remove('show');
-    tagProfessional.classList.remove('show');
+    document.querySelector('.tag-novice').classList.remove('show');
+    document.querySelector('.tag-experienced').classList.remove('show');
+    document.querySelector('.tag-professional').classList.remove('show');
   }
 }
 
  tags();
 
 // взаимоисключаюшиеся фильтры
+
 
 //открытие профиля по клику в header
 
