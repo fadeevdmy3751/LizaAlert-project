@@ -1,8 +1,12 @@
 const filters = document.querySelectorAll ('.filter');
 const inputs = document.querySelectorAll('.filter__input')
 const cards = document.querySelectorAll('.card')
+const tagNovice = document.querySelector ('.tag-novice')
+const tagExperienced = document.querySelector ('.tag-experienced')
+const tagProfessional = document.querySelector ('.tag-professional')
 
 // аккордион отркрывается-закрывается
+
 filters.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     evt.target.classList.toggle('filter_active');
@@ -14,6 +18,8 @@ filters.forEach(function (item) {
   }
   });
 });
+
+// фильтр карточек
 
 function filterCards() {
   function filter (category, cards) {
@@ -39,6 +45,26 @@ inputs.forEach((item) => {
 }
 
 filterCards();
+
+// тэги уровней под фильтрами
+
+function tags() {
+  if (document.querySelector('#novice').checked) {
+    tagNovice.classList.add('show');
+  } else if (document.querySelector('#experienced').checked) {
+    tagExperienced.classList.add('show');
+  } else if (document.querySelector('#professional').checked) {
+    tagProfessional.classList.add('show');
+  } else {
+    tagNovice.classList.remove('show');
+    tagExperienced.classList.remove('show');
+    tagProfessional.classList.remove('show');
+  }
+}
+
+ tags();
+
+// взаимоисключаюшиеся фильтры
 
 //открытие профиля по клику в header
 
