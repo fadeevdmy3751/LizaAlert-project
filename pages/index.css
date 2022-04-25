@@ -11,20 +11,28 @@
 @import url(../blocks/header/__button-profile/header__button-profile.css);
 @import url(../blocks/header/__button-profile/_active/header__button-profile_active.css);
 
-@import url(../blocks/filters/filters.css);
-@import url(../blocks/cards-list/cards-list.css);
 @import url(../blocks/index-content/index-content.css);
-
+@import url(../blocks/page-title/page-title.css);
 @import url(../blocks/filters/filters.css);
+@import url(../blocks/filters/__container/filters__container.css);
 @import url(../blocks/filters/__heading/filters__heading.css);
 @import url(../blocks/filters/__reset/filters__reset.css);
-
 @import url(../blocks/filter/filter.css);
 @import url(../blocks/filter/_active/filter_active.css);
 @import url(../blocks/filter/__panel/filter__panel.css);
 @import url(../blocks/filter/__list/filter__list.css);
 @import url(../blocks/filter/__label/filter__label.css);
 @import url(../blocks/filter/__input/filter__input.css);
+
 @import url(../blocks/filter/__item/filter__item.css);
 
+
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/card/card.css);
 @import url(../blocks/hide/hide.css);
+@import url(../blocks/show/show.css);
+
+@import url(../blocks/tags/tags.css);
+@import url(../blocks/tag/tag.css);
+@import url(../blocks/tag/__text/tag__text.css);
+@import url(../blocks/tag/__delete/tag__delete.css);
