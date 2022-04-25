@@ -4,6 +4,6 @@
   display: grid;
   gap: 24px;
   grid-template-areas:
-    "title title"
+    "page-title ."
     "filters cards-list"
 }
