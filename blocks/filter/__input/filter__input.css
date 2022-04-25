@@ -21,15 +21,11 @@
 
 .filter__input:checked+.filter__label::before {
   content: url(../../../images/check.svg);
-  color: #F06000;
 }
 
 .filter__input:checked+.filter__label {
   color: #F06000;
 }
 
-.custom-checkbox:not(:disabled):not(:checked)+.filter__label:hover::before {
-  cursor: pointer;
-}
 
 

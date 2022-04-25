@@ -1,3 +1,9 @@
 .title {
   grid-area: title;
+  margin: 0 0 8px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
 }

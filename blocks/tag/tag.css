@@ -1,0 +1,8 @@
+.tag {
+  margin: 0 8px 10px 0;
+  background: #E6E7EB;
+  border-radius: 16px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+}

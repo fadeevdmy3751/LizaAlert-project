@@ -1,6 +1,9 @@
 .index-content {
+  max-width: 1320px;
+  margin: 24px 60px 0;
   display: grid;
+  gap: 24px;
   grid-template-areas:
-    "title"
-    "filters cards-list";
+    "title title"
+    "filters cards-list"
 }
