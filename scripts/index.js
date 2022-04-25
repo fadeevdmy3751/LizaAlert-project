@@ -40,3 +40,14 @@ inputs.forEach((item) => {
 
 filterCards();
 
+//открытие профиля по клику в header
+
+const buttonProfile = document.querySelector('.header__button-profile');
+
+buttonProfile.addEventListener('click', function () {
+  window.open('profile.html');
+  }
+)
+
+
+
