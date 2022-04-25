@@ -1,7 +1,8 @@
 .header {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #FFFFFF;
-  box-shadow: 0px 4px 16px 0px #E7E8EB99;
+  margin: 12px 0 0 15px;
+  box-shadow: 0px 0px 4px rgba(231, 232, 235, 0.6), 0px 4px 16px rgba(231, 232, 235, 0.6);
 }
