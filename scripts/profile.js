@@ -2,7 +2,7 @@
 const buttonCourses = document.querySelector('.header__button-courses');
 
 buttonCourses.addEventListener('click', function () {
-  window.open('index.html');
+  location = 'index.html';
   }
 )
 

@@ -78,7 +78,7 @@ function showTags() {
 //открытие профиля по клику в header
 
 buttonProfile.addEventListener('click', function () {
-  window.open('profile.html');
+  location = 'profile.html';
   }
 )
 
