@@ -41,7 +41,7 @@ inputs.forEach((item) => {
 filterCards(); */
 
 
-
+const cards = document.querySelector(".cards");
 const cardsTemplate = document.querySelector(".cards-template");
 const initialCards = [
   {
