@@ -1,7 +1,6 @@
 const filters = document.querySelectorAll ('.filters__category');
 const inputs = document.querySelectorAll('.filters__input')
 const cards = document.querySelectorAll('.card')
-const tags = document.querySelectorAll('.tag');
 const buttonProfile = document.querySelector('.header__button-profile');
 const buttonRemove = document.querySelector('.filters__remove');
 const buttonsDelete = document.querySelectorAll('.tag__delete');
@@ -14,27 +13,27 @@ filters.forEach(function (item) {
     let panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
-  } else {
-    panel.style.display = "block";
-  }
-  });
-});
+      } else {
+        panel.style.display = "block";
+      }
+  })
+})
 
 // фильтр карточек
 
 function filterCards() {
   function filter (category, cards) {
-  cards.forEach((card) => {
+    cards.forEach((card) => {
     // проверяем категорию
-    const isItemFiltered = !card.classList.contains(category)
+      const isItemFiltered = !card.classList.contains(category)
     // если категории нет,прячем
-    if (isItemFiltered) {
-      card.classList.add('hide')
+        if (isItemFiltered) {
+          card.classList.add('hide')
     // удаляем класс hide
-        } else {
-          card.classList.remove('hide')
-      }
-    });
+            } else {
+            card.classList.remove('hide')
+            }
+      })
   }
 
   inputs.forEach((item) => {
@@ -44,8 +43,6 @@ function filterCards() {
       checkButtonRemove();
     });
   });
-
-
 }
 
 filterCards();
@@ -71,9 +68,6 @@ function showTags() {
     document.querySelector('.tag-professional').style.display = "none";
   }
 }
-
-// взаимоисключаюшиеся фильтры
-
 
 //открытие профиля по клику в header
 
