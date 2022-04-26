@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('.filters__input')
 const cards = document.querySelectorAll('.card')
 const tags = document.querySelectorAll('.tag');
 const buttonProfile = document.querySelector('.header__button-profile');
-const buttonRemove = document.querySelector('.filters__reset');
+const buttonRemove = document.querySelector('.filters__remove');
 const buttonsDelete = document.querySelectorAll('.tag__delete');
 
 // аккордион отркрывается-закрывается

@@ -16,7 +16,7 @@
 @import url(../blocks/filters/filters.css);
 @import url(../blocks/filters/__container/filters__container.css);
 @import url(../blocks/filters/__heading/filters__heading.css);
-@import url(../blocks/filters/__reset/filters__reset.css);
+@import url(../blocks/filters/__remove/filters__remove.css);
 @import url(../blocks/filters/__category/filters__category.css);
 @import url(../blocks/filters/__category/_active/filters__category_active.css);
 @import url(../blocks/filters/__panel/filters__panel.css);
