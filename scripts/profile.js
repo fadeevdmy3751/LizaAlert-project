@@ -6,6 +6,12 @@ buttonCourses.addEventListener('click', function () {
   }
 )
 
+const buttonProfile = document.querySelector('.header__button-profile');
+
+buttonProfile.addEventListener('click', function () {
+  location = 'profile.html';
+  }
+)
 
 //////////// Работа с кнопками форм ////////////
 const profilePage = document.querySelector('.profile-content');

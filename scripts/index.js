@@ -73,5 +73,10 @@ buttonProfile.addEventListener('click', function () {
   }
 )
 
+const buttonCourses = document.querySelector('.header__button-courses');
 
+buttonCourses.addEventListener('click', function () {
+  location = 'index.html';
+  }
+)
 
