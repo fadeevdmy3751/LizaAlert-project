@@ -20,49 +20,48 @@
   </header>
   <main class="index-content">
     <h1 class="page-title">Курсы</h1>
-    <div class="filters">
+    <section class="filters">
       <fieldset class="filters__container">
-        <p class="filters__heading">Фильтры</p>
-        <button class="filters__reset" type="reset" aria-label="Очистить">Очистить</button>
-        <button class="filter">Категория</button>
-        <div class="filter__panel"></div>
-        <button class="filter">Тематика</button>
-        <div class="filter__panel"></div>
-        <button class="filter">Уровень</button>
-        <div class="filter__panel">
-        <ul class="filter__list">
-          <li class="filter__item">
-            <input type="checkbox" name="level" id="novice" class="filter__input" value="novice" data-filter="novice" onchange="tags()">
-            <label for="novice" class="filter__label">Новичок</label>
+        <p class="filters__heading">Фильтры<button class="filters__remove" type="button" aria-label="Очистить">Очистить</button></p>
+        <button class="filters__category">Категория</button>
+        <div class="filters__panel"></div>
+        <button class="filters__category">Тематика</button>
+        <div class="filters__panel"></div>
+        <button class="filters__category">Уровень</button>
+        <div class="filters__panel">
+        <ul class="filters__list">
+          <li class="filters__item">
+            <input type="checkbox" name="level" id="novice" class="filters__input" value="novice" data-filter="novice" onchange="showTags()">
+            <label for="novice" class="filters__label">Новичок</label>
           </li>
-          <li class="filter__item">
-            <input type="checkbox" name="level" id="experienced" class="filter__input" value="experienced" data-filter="experienced" onchange="tags()">
-            <label for="experienced" class="filter__label">Бывалый</label>
+          <li class="filters__item">
+            <input type="checkbox" name="level" id="experienced" class="filters__input" value="experienced" data-filter="experienced" onchange="showTags()">
+            <label for="experienced" class="filters__label">Бывалый</label>
           </li>
-            <li class="filter__item">
-              <input type="checkbox" name="level" id="professional" class="filter__input" value="professional" data-filter="professional" onchange="tags()">
-              <label for="professional" class="filter__label">Профессионал</label>
+            <li class="filters__item">
+              <input type="checkbox" name="level" id="professional" class="filters__input" value="professional" data-filter="professional" onchange="showTags()">
+              <label for="professional" class="filters__label">Профессионал</label>
             </li>
           </ul>
         </div>
-        <button class="filter">Статус</button>
-        <div class="filter__panel">
-          <ul class="filter__list">
-            <li class="filter__item">
-              <input type="radio" name="status" id="not-active" class="filter__input" value="not-active" data-group="mutual" data-filter="completed">
-              <label for="not-active" class="filter__label">Не активный</label>
+        <button class="filters__category">Статус</button>
+        <div class="filters__panel">
+          <ul class="filters__list">
+            <li class="filters__item">
+              <input type="radio" name="status" id="not-active" class="filters__input" value="not-active" data-group="mutual" data-filter="completed">
+              <label for="not-active" class="filters__label">Не активный</label>
             </li>
-            <li class="filter__item">
-              <input type="checkbox" name="status" id="registered" class="filter__input" value="registered" data-filter="registered">
-              <label for="registered" class="filter__label">Вы записаны</label>
+            <li class="filters__item">
+              <input type="checkbox" name="status" id="registered" class="filters__input" value="registered" data-filter="registered">
+              <label for="registered" class="filters__label">Вы записаны</label>
             </li>
-            <li class="filter__item">
-              <input type="radio" name="status" id="active" class="filter__input" value="active" data-group="mutual" data-filter="active">
-              <label for="active" class="filter__label">Активный</label>
+            <li class="filters__item">
+              <input type="radio" name="status" id="active" class="filters__input" value="active" data-group="mutual" data-filter="active">
+              <label for="active" class="filters__label">Активный</label>
             </li>
-            <li class="filter__item">
-              <input type="checkbox" name="status" id="completed" class="filter__input" value="completed" data-filter="completed">
-              <label for="completed" class="filter__label">Пройден</label>
+            <li class="filters__item">
+              <input type="checkbox" name="status" id="completed" class="filters__input" value="completed" data-filter="completed">
+              <label for="completed" class="filters__label">Пройден</label>
             </li>
           </ul>
         </div>
@@ -81,7 +80,7 @@
           <button class="tag__delete" type="button" aria-label="Удалить"></button>
         </div>
       </div>
-    </div>
+    </section>
   </main>
   <script src="./scripts/index.js"></script>
 </body>

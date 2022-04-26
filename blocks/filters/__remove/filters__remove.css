@@ -1,15 +1,13 @@
-.filters__reset {
+.filters__remove {
   border: 0;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 36px;
-  right: 38px;
   background-color: transparent;
   cursor: pointer;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+  visibility: hidden;
 }
 

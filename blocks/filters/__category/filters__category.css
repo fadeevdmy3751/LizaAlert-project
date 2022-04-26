@@ -1,4 +1,4 @@
-.filter {
+.filters__category {
   margin: 0 auto 0;
   padding: 32px 0 32px;
   background-color: #FFFFFF;
@@ -16,8 +16,8 @@
   transition: 0.4s;
 }
 
-.filter:after {
-  content: url(../../images/filter-item_open.svg);
+.filters__category:after {
+  content: url(../../../images/filter-item_open.svg);
   float: right;
   margin-left: 15px;
 }
