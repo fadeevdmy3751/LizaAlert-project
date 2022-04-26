@@ -9,3 +9,50 @@ buttonCourses.addEventListener('click', function () {
 
 //////////// Работа с кнопками форм ////////////
 const profilePage = document.querySelector('.profile-content');
+const personalDataForm = profilePage.querySelector('.form_type_personal-data'); // Форма с личными данными
+const accountForm = profilePage.querySelector('.form_type_account'); // Форма Аккаунт
+
+const personalDataBtn = personalDataForm.querySelector('.form__submit-btn'); // Кнопка в форме с личными данными
+const accountBtn = accountForm.querySelector('.form__submit-btn'); // Кнопка в форме Аккаунт
+
+function changeButton (button) {
+  if (button.classList.contains('form__submit-btn_type_unsubmitted')) {   // Функция для изменения класса кнопки
+    button.classList.remove('form__submit-btn_type_unsubmitted');
+    button.classList.add('form__submit-btn_type_submitted');
+  } else {(button.classList.contains('form__submit-btn_type_submitted'))
+    button.classList.remove('form__submit-btn_type_submitted');
+    button.classList.add('form__submit-btn_type_unsubmitted');
+}}
+
+function personalDataFormSubmit (evt) {
+  evt.preventDefault();
+  changeButton(personalDataBtn);
+}
+
+personalDataForm.addEventListener('submit', personalDataFormSubmit); // Кнопка окрашивается в серый при нажатии в форме с личными данными;
+
+function accountFormSubmit (evt) {
+  evt.preventDefault();
+  changeButton(accountBtn);
+}
+
+accountForm.addEventListener('submit', accountFormSubmit); // Кнопка окрашивается в серый при нажатии в форме Аккаунт;
+
+const personalDataFormInputs = personalDataForm.querySelectorAll('.form__input'); // Все инпуты из формы с личными данными;
+const accountFormInputs = accountForm.querySelectorAll('.form__input'); // Все инпуты из формы Аккаунт;
+
+personalDataFormInputs.forEach(function(input) {
+  input.addEventListener('focusout', function () {
+    if (personalDataBtn.classList.contains('form__submit-btn_type_submitted')) {    // Кнопка окрашивается в оранжевый после ввода данных в поля Личные данные
+      changeButton(personalDataBtn)
+    }
+  });
+})
+
+accountFormInputs.forEach(function(input) {
+  input.addEventListener('focusout', function () {
+    if (accountBtn.classList.contains('form__submit-btn_type_submitted')) {    // Кнопка окрашивается в оранжевый после ввода данных в поля Аккаунт
+      changeButton(accountBtn)
+    }
+  });
+})
