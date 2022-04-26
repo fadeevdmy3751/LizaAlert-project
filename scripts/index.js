@@ -41,18 +41,11 @@ function filterCards() {
     item.addEventListener("click", () => {
       const currentCategory = item.dataset.filter;
       filter(currentCategory, cards);
+      checkButtonRemove();
     });
   });
 
-  inputs.forEach((item) => {
-    item.addEventListener("click", () => {
-      if (item.checked) {
-        buttonRemove.style.visibility = "visible";
-          } else {
-            buttonRemove.style.visibility = "hidden";
-        };
-    });
-  });
+
 }
 
 filterCards();
@@ -78,6 +71,7 @@ function showTags() {
     document.querySelector('.tag-professional').style.display = "none";
   }
 }
+
 // взаимоисключаюшиеся фильтры
 
 
@@ -100,35 +94,40 @@ buttonCourses.addEventListener('click', function () {
 function removeFilters() {
   inputs.forEach(function(el) {
     el.checked = false;
+    checkButtonRemove();
   });
   showTags();
-  buttonRemove.style.visibility = "hidden";
 }
 
 buttonRemove.addEventListener('click', removeFilters)
 
 // кнопка тэга удалить
 
-function deleteTags() {
-  tags.forEach(function (el){
-  if (el.classList.contains('.tag-novice')) {
+function deleteTags(tag) {
+  if (tag.classList.contains('tag-novice')) {
     document.querySelector('#novice').checked = false;
-  }
+  };
 
-   else if (el.classList.contains('.tag-experienced')) {
+  if (tag.classList.contains('tag-experienced')) {
     document.querySelector('#experienced').checked = false;
-  }
+  };
 
-  else if (el.classList.contains('.tag-professional')) {
+  if (tag.classList.contains('tag-professional')) {
     document.querySelector('#professional').checked = false;
-  }
-})
+  };
 }
 
-buttonsDelete.forEach(function (el) {
-  el.addEventListener('click', function (evt) {
+buttonsDelete.forEach(function (item) {
+  item.addEventListener('click', function (evt) {
     const parentTag = evt.target.closest('.tag');
       deleteTags(parentTag);
       showTags();
-  });
+      checkButtonRemove();
+    });
 })
+
+// состояние кнопки очистить
+
+function checkButtonRemove() {
+  buttonRemove.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
+}
