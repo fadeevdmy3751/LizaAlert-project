@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   background-color: white;
+  max-height: 0;
   overflow: hidden;
-  display: none;
+  transition: max-height 0.3s linear;
 }

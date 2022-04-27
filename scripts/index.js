@@ -10,12 +10,12 @@ const buttonsDelete = document.querySelectorAll('.tag__delete');
 filters.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     evt.target.classList.toggle('filters__category_active');
-    let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
+    const panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
   })
 })
 
