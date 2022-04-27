@@ -1,18 +1,14 @@
 .card__button{
-  
   width: 224px;
   height: 48px;
   border-radius: 16px;
   border: none;
   text-align: center;
-  background: #FF6600;
- 
   font-family: 'Golos';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: #FFFFFF;
-
   margin-top: 64px;
+  padding: 12px 24px 12px 24px;
 }

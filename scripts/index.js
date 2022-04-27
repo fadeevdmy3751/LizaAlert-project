@@ -1,7 +1,8 @@
 const filters = document.querySelectorAll ('.filters__category');
 const inputs = document.querySelectorAll('.filters__input') // все чекбоксы
 const cards = document.querySelectorAll('.card') // gone down to cards
-const cardsContainer = document.querySelector(".cards");
+const cardsTemplate = document.querySelector(".cards-template");
+const cardsContainer = document.querySelector(".cards-list");
 const buttonProfile = document.querySelector('.header__button-profile');
 const buttonCourses = document.querySelector('.header__button-courses');
 const buttonClean = document.querySelector('.filters__remove');
@@ -143,11 +144,16 @@ buttonsDeleteTag.forEach(function (item) {
 
 // состояние кнопки очистить
 
-/// карты
-const cardsTemplate = document.querySelector(".cards-template");
 function checkButtonClean() {
   buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
 }
+
+function cardStatusChanged(title) {
+  // найти карточку с нужным title
+  // заменить статус
+  // внести изменение в массив
+}
+
 function createCard (obj) {
   const newCard = cardsTemplate.content.cloneNode(true);
 
@@ -160,19 +166,18 @@ function createCard (obj) {
   newCard.querySelector(".card__clock").textContent = obj.duration;
   const button = newCard.querySelector(".card__button");
   button.textContent = obj.status;
-//TODO классы в зависимости от статуса добавить (и создать)
-  switch (obj.status) :{
-    case (available){
-      button.classList.add('.card__button-style_available');
-    }
-    case (inProgress):{
-      button.classList.add('.card__button-style_inProgress')   ;
-    }
-    case (completed):{
-      button.classList.add('.card__button-style_completed')      ;
-      button.state='disabled'
-    }
+  button.setAttribute('onclick', `cardStatusChanged('${obj.title}')`)
 
+  switch (obj.status) {
+    case available:
+      button.classList.add('card__button_style_available');
+      break;
+    case inProgress:
+      button.classList.add('card__button_style_inProgress');
+      break;
+    case completed:
+      button.classList.add('card__button_style_completed');
+      button.state='disabled'
   }
   // setListenerCards(newCard);
 

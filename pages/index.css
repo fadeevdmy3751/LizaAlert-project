@@ -48,4 +48,7 @@
 @import url(../blocks/card/__clock-img/card__clock-img.css);
 @import url(../blocks/card/__clock/card__clock.css);
 @import url(../blocks/card/__button/card__button.css);
-@import url(../blocks/cards-list/cards-list.css);
+@import url(../blocks/card/__button/_style/card__button_style_available.css);
+@import url(../blocks/card/__button/_style/card__button_style_completed.css);
+@import url(../blocks/card/__button/_style/card__button_style_inProgress.css);
+
