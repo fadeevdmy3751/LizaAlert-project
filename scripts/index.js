@@ -1,10 +1,14 @@
 const filters = document.querySelectorAll ('.filters__category');
-const inputs = document.querySelectorAll('.filters__input')
+const inputs = document.querySelectorAll('.filters__input') // все чекбоксы
 const cards = document.querySelectorAll('.card') // gone down to cards
 const cardsContainer = document.querySelector(".cards");
 const buttonProfile = document.querySelector('.header__button-profile');
-const buttonRemove = document.querySelector('.filters__remove');
-const buttonsDelete = document.querySelectorAll('.tag__delete');
+const buttonCourses = document.querySelector('.header__button-courses');
+const buttonClean = document.querySelector('.filters__remove');
+const buttonsDeleteTag = document.querySelectorAll('.tag__delete');
+
+const activeChk = document.querySelector('#active');
+const inactiveChk = document.querySelector('#not-active');
 
 // аккордион отркрывается-закрывается
 
@@ -20,49 +24,73 @@ filters.forEach(function (item) {
   })
 })
 
-// фильтр карточек
-
-function filterCards() {
-  function filter (category, cards) {
-    cards.forEach((card) => {
+function filter (category, cards) {
+  cards.forEach((card) => {
     // проверяем категорию
-      const isItemFiltered = !card.classList.contains(category)
+    const isItemFiltered = !card.classList.contains(category) // переписать кака будет
     // если категории нет,прячем
-        if (isItemFiltered) {
-          card.classList.add('hide')
-    // удаляем класс hide
-            } else {
-            card.classList.remove('hide')
-            }
-      })
-  }
-
-  inputs.forEach((item) => {
-    item.addEventListener("click", () => {
-      const currentCategory = item.dataset.filter;
-      filter(currentCategory, cards);
-      checkButtonRemove();
-    });
-  });
+    if (isItemFiltered) {
+      card.classList.add('hide')
+      // удаляем класс hide
+    } else {
+      card.classList.remove('hide')
+    }
+  })
 }
 
-filterCards();
+inputs.forEach((item) => {
+  item.addEventListener("click", (el) => {
+    if (el.target.id == 'active' && el.target.checked == true) {
+      inactiveChk.checked = false;
+    }
+    if (el.target.id == 'not-active' && el.target.checked == true) {
+      activeChk.checked = false;
+    }
+    const currentCategory = item.dataset.filter;
+    filter(currentCategory, cards);
+    checkButtonRemove();
+  });
+});
+
+// фильтр карточек commented
+// not working
+// function filterCards() {
+//   function filter (category, cards) {
+//     cards.forEach((card) => {
+//     // проверяем категорию
+//       const isItemFiltered = !card.classList.contains(category)
+//     // если категории нет,прячем
+//         if (isItemFiltered) {
+//           card.classList.add('hide')
+//     // удаляем класс hide
+//             } else {
+//             card.classList.remove('hide')
+//             }
+//     })
+//   }
+//   inputs.forEach((item) => {
+//     item.addEventListener("click", () => {
+//       const currentCategory = item.dataset.filter;
+//       filter(currentCategory, cards);
+//       checkButtonRemove();
+//     });
+//   });
+// }
+
+// filterCards(); вызывать по кликам, изначальный перенесен выше
 
 // тэги уровней под фильтрами
-
 function showTags() {
   if (document.querySelector('#novice').checked) {
     document.querySelector('.tag-novice').style.display = "flex";
   } else {
     document.querySelector('.tag-novice').style.display = "none";
   }
-
   if (document.querySelector('#experienced').checked) {
     document.querySelector('.tag-experienced').style.display = "flex";
   } else {
     document.querySelector('.tag-experienced').style.display = "none";
   }
-
   if (document.querySelector('#professional').checked) {
     document.querySelector('.tag-professional').style.display = "flex";
   } else {
@@ -70,15 +98,11 @@ function showTags() {
   }
 }
 
-//открытие профиля по клику в header
-
+//открытие по клику в header
 buttonProfile.addEventListener('click', function () {
   location = 'profile.html';
   }
 )
-
-const buttonCourses = document.querySelector('.header__button-courses');
-
 buttonCourses.addEventListener('click', function () {
   location = 'index.html';
   }
@@ -94,7 +118,7 @@ function removeFilters() {
   showTags();
 }
 
-buttonRemove.addEventListener('click', removeFilters)
+buttonClean.addEventListener('click', removeFilters)
 
 // кнопка тэга удалить
 
@@ -111,8 +135,8 @@ function deleteTags(tag) {
     document.querySelector('#professional').checked = false;
   }
 }
-
-buttonsDelete.forEach(function (item) {
+//
+buttonsDeleteTag.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     const parentTag = evt.target.closest('.tag');
       deleteTags(parentTag);
@@ -126,7 +150,7 @@ buttonsDelete.forEach(function (item) {
 /// карты
 const cardsTemplate = document.querySelector(".cards-template");
 function checkButtonRemove() {
-  buttonRemove.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
+  buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
 }
 function createCard (obj) {
   const newCard = cardsTemplate.content.cloneNode(true);
