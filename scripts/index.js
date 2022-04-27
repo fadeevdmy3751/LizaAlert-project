@@ -100,7 +100,7 @@ buttonRemove.addEventListener('click', removeFilters)
 function deleteTags(tag) {
   if (tag.classList.contains('tag-novice')) {
     document.querySelector('#novice').checked = false;
-  };
+  }; 
 
   if (tag.classList.contains('tag-experienced')) {
     document.querySelector('#experienced').checked = false;
@@ -144,7 +144,7 @@ function createCard (obj) {
 function renderCard() {
   initialCards.forEach(el => {
     const newCard = createCard(el);
-    console.log(newCard);
+    // console.log(newCard);
     cards.append(newCard);
   });
 }
