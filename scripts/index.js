@@ -37,15 +37,11 @@ function filter (category, cards) {
     }
   })
 }
-
+// лиснеры на чекбоксы, +- работают, доработать фильтер
 inputs.forEach((item) => {
   item.addEventListener("click", (el) => {
-    if (el.target.id == 'active' && el.target.checked == true) {
-      inactiveChk.checked = false;
-    }
-    if (el.target.id == 'not-active' && el.target.checked == true) {
-      activeChk.checked = false;
-    }
+    if (el.target.id === 'active' && el.target.checked === true) inactiveChk.checked = false;
+    if (el.target.id === 'not-active' && el.target.checked === true) activeChk.checked = false;
     const currentCategory = item.dataset.filter;
     filter(currentCategory, cards);
     checkButtonRemove();
@@ -162,6 +158,8 @@ function createCard (obj) {
   newCard.querySelector(".card__description").textContent = obj.text;
   newCard.querySelector(".card__lessons").textContent = obj.lessonsAmount;
   newCard.querySelector(".card__clock").textContent = obj.duration;
+  newCard.querySelector(".card__button").textContent = obj.status;
+//TODO классы в зависимости от статуса добавить (и создать)
 
   // setListenerCards(newCard);
 
@@ -170,6 +168,7 @@ function createCard (obj) {
 }
 
 function renderCard() {
+  cardsContainer.innerHTML = '';
   initialCards.forEach(el => {
     const newCard = createCard(el);
     // console.log(newCard);
@@ -178,3 +177,4 @@ function renderCard() {
 }
 
 renderCard();
+

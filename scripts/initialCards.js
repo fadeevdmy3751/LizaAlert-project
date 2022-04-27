@@ -2,9 +2,9 @@ const noviceLevel = 'Новичок'
 const middleLevel = 'Бывалый'
 const professionalLevel = 'Профессионал'
 // всего 3 статуса: доступен для прохождения, в прцессе и пройден. первые два - это активные, третий- неактивный
-const available = 'available';
-const inProgress = 'inProgress';
-const completed = 'completed';
+const available = 'Записаться';
+const inProgress = 'Продолжить';
+const completed = 'Пройден';
 
 const initialCards = [
   {
