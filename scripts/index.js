@@ -1,6 +1,6 @@
 const filters = document.querySelectorAll ('.filters__category');
 const inputs = document.querySelectorAll('.filters__input')
-const cards = document.querySelectorAll('.card')
+//const cards = document.querySelectorAll('.card')
 const buttonProfile = document.querySelector('.header__button-profile');
 const buttonRemove = document.querySelector('.filters__remove');
 const buttonsDelete = document.querySelectorAll('.tag__delete');
@@ -122,6 +122,31 @@ buttonsDelete.forEach(function (item) {
 
 // состояние кнопки очистить
 
+/// карты
+const cards = document.querySelector(".cards");
+const cardsTemplate = document.querySelector(".cards-template");
 function checkButtonRemove() {
   buttonRemove.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
 }
+function createCard (obj) {
+  const newCard = cardsTemplate.content.cloneNode(true);
+
+  newCard.querySelector(".card__image").src = obj.img;
+  newCard.querySelector(".card__title").textContent = obj.title;
+  newCard.querySelector(".card__description").textContent = obj.text;
+
+  // setListenerCards(newCard);
+
+  return newCard;
+
+}
+
+function renderCard() {
+  initialCards.forEach(el => {
+    const newCard = createCard(el);
+    console.log(newCard);
+    cards.append(newCard);
+  });
+}
+
+renderCard();

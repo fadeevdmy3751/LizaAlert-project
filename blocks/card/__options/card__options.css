@@ -1,0 +1,9 @@
+.card__options {
+  width: 448px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 32px;
+  margin-right: 32px;
+}

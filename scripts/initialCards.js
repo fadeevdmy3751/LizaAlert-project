@@ -1,3 +1,9 @@
+const novice = 'Новичок'
+// всего 3 статуса: доступен для прохождения, в прцессе и пройден. первые два - это активные, третий- неактивный
+const available = 'available';
+const inProgress = 'inProgress';
+const completed = 'completed';
+
 const initialCards = [
   {
     img: './images/dog.png',
@@ -5,7 +11,8 @@ const initialCards = [
     text: 'Поисково-спасательная работа, следовая работа, а так же поиск тел погибших с помощью собак',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: levelFilters.keys()[1]
+    level: levelFilters.keys()[1],
+    status: available,
   },
   {
     img: './images/dog.png',
@@ -13,7 +20,8 @@ const initialCards = [
     text: 'Оперативное реагирование, контроль поступающих заявок и звонков, распределение задач, помощь в решении вопросов, удалённое ...',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: levelFilters.keys()[2]
+    level: 'Новичок',
+    status: available,
   },
   {
     img: './images/dog.png',
@@ -21,7 +29,8 @@ const initialCards = [
     text: 'Применение БПЛА в поиске людей, а так же передача полученной с помощью техники информации спасательным службам',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: levelFilters.keys()[1]
+    level: levelFilters.keys()[1],
+    status: completed,
   },
   {
     img: './images/dog.png',
@@ -29,7 +38,8 @@ const initialCards = [
     text: 'Основы оказания первой помощи на поиске, юридические аспекты, базовые алгоритмы, разбор ошибок при оказания помощи на поиске',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: levelFilters.keys()[1]
+    level: levelFilters.keys()[1],
+    status: inProgress,
   },
   {
     img: './images/dog.png',
@@ -37,7 +47,7 @@ const initialCards = [
     text: 'Создание ориентировок, заказ карт, связь через мини АТС, обеспечение поиска',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: levelFilters.keys()[0]
+    level: levelFilters.keys()[0],
   },
   {
     img: './images/dog.png',
