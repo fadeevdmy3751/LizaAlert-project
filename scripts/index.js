@@ -44,6 +44,7 @@ filterCards(); */
 const cards = document.querySelector(".cards");
 const cardsTemplate = document.querySelector(".cards-template");
 
+
 function createCard (obj) {
   const newCard = cardsTemplate.content.cloneNode(true);
 
@@ -58,6 +59,23 @@ function createCard (obj) {
   return newCard;
 }
 
-  initialCards.forEach(function(el){
-    cards.append(createCard(el));
-  });
+initialCards.forEach(function(el){
+  cards.append(createCard(el));
+});
+
+/* const cardButton = document.querySelector(".card__button");
+cardButton.forEach(function (el) {
+  el.addEventListener("click", changesButton);
+});
+
+function changesButton (event) {
+  event.currentTarget.classList.add("card__button-сontinue");
+} */
+
+function changesButton(event) {
+  const cardButton = event.currentTarget.classList.add("card__button-сontinue");
+}
+
+
+
+

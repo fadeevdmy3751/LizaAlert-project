@@ -2,6 +2,23 @@
   
   width: 224px;
   height: 48px;
+  border: 1.2px solid #E6E7EB;
+  border-radius: 16px;
+  text-align: center;
+  background: #FFFFFF;
+ 
+  font-family: 'Golos';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color:  #FF6600;
+
+  margin-top: 64px;
+}
+
+/* width: 224px;
+  height: 48px;
   border-radius: 16px;
   border: none;
   text-align: center;
@@ -14,5 +31,4 @@
   line-height: 24px;
   color: #FFFFFF;
 
-  margin-top: 64px;
-}
+  margin-top: 64px; */
