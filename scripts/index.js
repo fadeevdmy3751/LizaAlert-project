@@ -24,27 +24,27 @@ filters.forEach(function (item) {
   })
 })
 
-function filter (category, cards) {
-  cards.forEach((card) => {
-    // проверяем категорию
-    const isItemFiltered = !card.classList.contains(category) // переписать кака будет
-    // если категории нет,прячем
-    if (isItemFiltered) {
-      card.classList.add('hide')
-      // удаляем класс hide
-    } else {
-      card.classList.remove('hide')
-    }
-  })
-}
+// function filter (category, cards) {
+//   cards.forEach((card) => {
+//     // проверяем категорию
+//     const isItemFiltered = !card.classList.contains(category) // переписать кака будет
+//     // если категории нет,прячем
+//     if (isItemFiltered) {
+//       card.classList.add('hide')
+//       // удаляем класс hide
+//     } else {
+//       card.classList.remove('hide')
+//     }
+//   })
+// }
 // лиснеры на чекбоксы, +- работают, доработать фильтер
 inputs.forEach((item) => {
   item.addEventListener("click", (el) => {
     if (el.target.id === 'active' && el.target.checked === true) inactiveChk.checked = false;
     if (el.target.id === 'not-active' && el.target.checked === true) activeChk.checked = false;
     const currentCategory = item.dataset.filter;
-    filter(currentCategory, cards);
-    checkButtonRemove();
+    // filter(currentCategory, cards);
+    checkButtonClean();
   });
 });
 
@@ -68,7 +68,7 @@ inputs.forEach((item) => {
 //     item.addEventListener("click", () => {
 //       const currentCategory = item.dataset.filter;
 //       filter(currentCategory, cards);
-//       checkButtonRemove();
+//       checkButtonClean();
 //     });
 //   });
 // }
@@ -109,7 +109,7 @@ buttonCourses.addEventListener('click', function () {
 function removeFilters() {
   inputs.forEach(function(el) {
     el.checked = false;
-    checkButtonRemove();
+    checkButtonClean();
   });
   showTags();
 }
@@ -137,7 +137,7 @@ buttonsDeleteTag.forEach(function (item) {
     const parentTag = evt.target.closest('.tag');
       deleteTags(parentTag);
       showTags();
-      checkButtonRemove();
+      checkButtonClean();
     });
 })
 
@@ -145,7 +145,7 @@ buttonsDeleteTag.forEach(function (item) {
 
 /// карты
 const cardsTemplate = document.querySelector(".cards-template");
-function checkButtonRemove() {
+function checkButtonClean() {
   buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
 }
 function createCard (obj) {
@@ -158,9 +158,22 @@ function createCard (obj) {
   newCard.querySelector(".card__description").textContent = obj.text;
   newCard.querySelector(".card__lessons").textContent = obj.lessonsAmount;
   newCard.querySelector(".card__clock").textContent = obj.duration;
-  newCard.querySelector(".card__button").textContent = obj.status;
+  const button = newCard.querySelector(".card__button");
+  button.textContent = obj.status;
 //TODO классы в зависимости от статуса добавить (и создать)
+  switch (obj.status) :{
+    case (available){
+      button.classList.add('.card__button-style_available');
+    }
+    case (inProgress):{
+      button.classList.add('.card__button-style_inProgress')   ;
+    }
+    case (completed):{
+      button.classList.add('.card__button-style_completed')      ;
+      button.state='disabled'
+    }
 
+  }
   // setListenerCards(newCard);
 
   return newCard;
