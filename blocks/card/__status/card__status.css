@@ -1,7 +1,7 @@
 .card__status {
   background: #E6E7EB;
   border-radius: 16px;
-  width: 96px;
+  width: fit-content;
   text-align: center;
   font-family: 'Golos';
   font-style: normal;
