@@ -45,6 +45,8 @@ inputs.forEach((item) => {
     if (el.target.id === 'not-active' && el.target.checked === true) activeChk.checked = false;
     const currentCategory = item.dataset.filter;
     // filter(currentCategory, cards);
+    // функционал по актуализации данных в масииве initialFilters
+    // запуск renderCard()
     checkButtonClean();
   });
 });
@@ -148,7 +150,7 @@ function checkButtonClean() {
   buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
 }
 
-function cardStatusChanged(title) {
+function cardStatusChanged(button, title) {
   // найти карточку с нужным title
   // заменить статус
   // внести изменение в массив
@@ -166,7 +168,7 @@ function createCard (obj) {
   newCard.querySelector(".card__clock").textContent = obj.duration;
   const button = newCard.querySelector(".card__button");
   button.textContent = obj.status;
-  button.setAttribute('onclick', `cardStatusChanged('${obj.title}')`)
+  button.setAttribute('onclick', `cardStatusChanged(this, '${obj.title}')`)
 
   switch (obj.status) {
     case available:
@@ -190,6 +192,17 @@ function renderCard() {
   initialCards.forEach(el => {
     const newCard = createCard(el);
     // console.log(newCard);
+    // получаем текущее актуальное состояние фильтров
+    // т.к. обращение к initialFilters[levelFilters, statusFilters]
+    // заходим в levelFilters и оттуда выбираем те значения, у которых true -> кладём в actualLevelFiltersArray
+    // заходим в statusFilters и оттуда выбираем те значения, у которых true -> кладём в actualStatusFiltersArray
+    // if actualLevelFiltersArray.length != 0
+    //    bool currentLevelExists = el[level] in actualLevelFiltersArray
+    // if actualStatusFiltersArray.length != 0
+    //    bool currentStatusExists = el[level] in actualStatusFiltersArray
+    //
+    // те фильтры, которые работают -> сверка с итерируемой карточкой
+    //  if
     cardsContainer.append(newCard);
   });
 }
