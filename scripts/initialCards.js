@@ -1,7 +1,3 @@
-const beginnerLevel = 'Новичок'
-const middleLevel = 'Бывалый'
-const higherLevel = 'Профессионал'
-
 const initialCards = [
   {
     img: './images/dog.png',
@@ -9,7 +5,7 @@ const initialCards = [
     text: 'Поисково-спасательная работа, следовая работа, а так же поиск тел погибших с помощью собак',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: middleLevel
+    level: levelFilters.keys()[1]
   },
   {
     img: './images/dog.png',
@@ -17,7 +13,7 @@ const initialCards = [
     text: 'Оперативное реагирование, контроль поступающих заявок и звонков, распределение задач, помощь в решении вопросов, удалённое ...',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: higherLevel
+    level: levelFilters.keys()[2]
   },
   {
     img: './images/dog.png',
@@ -25,7 +21,7 @@ const initialCards = [
     text: 'Применение БПЛА в поиске людей, а так же передача полученной с помощью техники информации спасательным службам',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: middleLevel
+    level: levelFilters.keys()[1]
   },
   {
     img: './images/dog.png',
@@ -33,7 +29,7 @@ const initialCards = [
     text: 'Основы оказания первой помощи на поиске, юридические аспекты, базовые алгоритмы, разбор ошибок при оказания помощи на поиске',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: middleLevel
+    level: levelFilters.keys()[1]
   },
   {
     img: './images/dog.png',
@@ -41,7 +37,7 @@ const initialCards = [
     text: 'Создание ориентировок, заказ карт, связь через мини АТС, обеспечение поиска',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: beginnerLevel
+    level: levelFilters.keys()[0]
   },
   {
     img: './images/dog.png',
@@ -49,7 +45,7 @@ const initialCards = [
     text: 'Приём заявок на поиск людей с последующей передачей информации инфоргам',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: beginnerLevel
+    level: levelFilters.keys()[0]
   },
   {
     img: './images/dog.png',
@@ -57,7 +53,7 @@ const initialCards = [
     text: 'Прозвон больниц, ОВД, различных ведомств, иногда свидетелей и возможных свидетелей',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: beginnerLevel
+    level: levelFilters.keys()[0]
   },
   {
     img: './images/dog.png',
@@ -65,6 +61,6 @@ const initialCards = [
     text: 'Короткое описание курса. людей в лесу и в городе. Все поисковые мероприятия организуются силами добровольцев «ЛизаАлер…',
     classesAmount: '144 занятия',
     duration: '144 ч',
-    level: beginnerLevel
+    level: levelFilters.keys()[0]
   }
 ];
