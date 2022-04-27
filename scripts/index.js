@@ -1,6 +1,7 @@
 const filters = document.querySelectorAll ('.filters__category');
 const inputs = document.querySelectorAll('.filters__input')
-//const cards = document.querySelectorAll('.card')
+const cards = document.querySelectorAll('.card') // gone down to cards
+const cardsContainer = document.querySelector(".cards");
 const buttonProfile = document.querySelector('.header__button-profile');
 const buttonRemove = document.querySelector('.filters__remove');
 const buttonsDelete = document.querySelectorAll('.tag__delete');
@@ -100,15 +101,15 @@ buttonRemove.addEventListener('click', removeFilters)
 function deleteTags(tag) {
   if (tag.classList.contains('tag-novice')) {
     document.querySelector('#novice').checked = false;
-  }; 
+  }
 
   if (tag.classList.contains('tag-experienced')) {
     document.querySelector('#experienced').checked = false;
-  };
+  }
 
   if (tag.classList.contains('tag-professional')) {
     document.querySelector('#professional').checked = false;
-  };
+  }
 }
 
 buttonsDelete.forEach(function (item) {
@@ -123,7 +124,6 @@ buttonsDelete.forEach(function (item) {
 // состояние кнопки очистить
 
 /// карты
-const cards = document.querySelector(".cards");
 const cardsTemplate = document.querySelector(".cards-template");
 function checkButtonRemove() {
   buttonRemove.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
@@ -145,7 +145,7 @@ function renderCard() {
   initialCards.forEach(el => {
     const newCard = createCard(el);
     // console.log(newCard);
-    cards.append(newCard);
+    cardsContainer.append(newCard);
   });
 }
 
