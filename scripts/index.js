@@ -158,6 +158,8 @@ function createCard (obj) {
   newCard.querySelector(".card__image").src = obj.img;
   newCard.querySelector(".card__title").textContent = obj.title;
   newCard.querySelector(".card__description").textContent = obj.text;
+  newCard.querySelector(".card__lessons").textContent = obj.lessonsAmount;
+  newCard.querySelector(".card__clock").textContent = obj.duration;
 
   // setListenerCards(newCard);
 
