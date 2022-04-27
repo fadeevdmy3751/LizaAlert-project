@@ -156,6 +156,7 @@ function createCard (obj) {
   const newCard = cardsTemplate.content.cloneNode(true);
 
   newCard.querySelector(".card__image").src = obj.img;
+  newCard.querySelector(".card__image").alt = obj.imgAlt;
   newCard.querySelector(".card__title").textContent = obj.title;
   newCard.querySelector(".card__status").textContent = obj.level;
   newCard.querySelector(".card__description").textContent = obj.text;
