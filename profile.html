@@ -48,15 +48,15 @@
         <h2 class="form__title">Личные данные</h2>
         <fieldset class="form__fieldset">
           <label for="full-name" class="form__label">ФИО</label>
-          <input type="text" class="form__input form__input_type_edit" id="full-name">
+          <input type="text" class="form__input form__input_type_edit" id="full-name" name="full-name">
           <label for="birth-date" class="form__label">Дата рождения</label>
-          <input type="date" class="form__input form__input_type_edit" id="birth-date">
+          <input type="date" class="form__input form__input_type_edit" id="birth-date" name="birth-date">
           <label for="region" class="form__label">Географический регион</label>
-          <input type="text" class="form__input form__input_type_edit" id="region">
+          <input type="text" class="form__input form__input_type_edit" id="region" name="region">
           <label for="nickname" class="form__label">Позывной на форуме</label>
-          <input type="text" class="form__input form__input_type_edit" id="nickname">
+          <input type="text" class="form__input form__input_type_edit" id="nickname" name="nickname">
           <label for="photo" class="form__label">Фото</label>
-          <input type="file" disabled class="form__input form__input_type_attach" accept="image/jpeg" id="photo">
+          <input type="file" disabled class="form__input form__input_type_attach" accept="image/jpeg" id="photo" name="file">
           <button class="form__submit-btn form__submit-btn_type_unsubmitted" type="submit">Сохранить&nbsp;изменения</button>
         </fieldset>
       </form>
@@ -80,11 +80,11 @@
         <h2 class="form__title">Аккаунт</h2>
         <fieldset class="form__fieldset">
           <label for="phone-number" class="form__label">Номер телефона</label>
-          <input type="tel" class="form__input" id="phone-number" placeholder="+7 123 456 78 90">
+          <input type="tel" class="form__input" id="phone-number" name="phone-number" placeholder="+7 123 456 78 90">
           <label for="email" class="form__label">Email</label>
-          <input type="email" class="form__input form__input_type_edit" id="email">
+          <input type="email" class="form__input form__input_type_edit" id="email" name="email">
           <label for="password" class="form__label">Пароль</label>
-          <input type="password" class="form__input form__input_type_edit" id="password">
+          <input type="password" class="form__input form__input_type_edit" id="password" name="password">
           <button class="form__submit-btn form__submit-btn_type_unsubmitted" type="submit">Сохранить&nbsp;изменения</button>
         </fieldset>
       </form>
@@ -92,12 +92,12 @@
 
     <div class="text-tips text-tips_place_account">
       <p class="text-tips__paragraph">
-        Номер телефона используется как уникальный идентификатор
+        Номер телефона используется как&nbsp;уникальный идентификатор
         пользователя, поэтому его нельзя поменять вручную
       </p>
       <p class="text-tips__paragraph">
-        Если по&nbsp;какой-то причине у&nbsp;вас нет доступа к&nbsp;номеру телефона,
-        на&nbsp;который вы&nbsp;зарегистрировали аккаунт, напишите в&nbsp;поддержку
+        Если по какой-то причине у&nbsp;вас&nbsp;нет доступа к номеру телефона,
+        на который вы&nbsp;зарегистрировали аккаунт, напишите в поддержку
       </p>
       <p class="text-tips__paragraph">Email нужен для восстановления пароля</p>
     </div>
