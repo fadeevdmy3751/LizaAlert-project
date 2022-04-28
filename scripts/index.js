@@ -1,14 +1,14 @@
-const filters = document.querySelectorAll ('.filters__category');
-const inputs = document.querySelectorAll('.filters__input') // все чекбоксы
-// const cards = document.querySelectorAll('.card') // gone down to cards
+const filters = document.querySelectorAll('.filters__category');
+const inputs = document.querySelectorAll('.filters__input'); // все чекбоксы
+
 const cardsTemplate = document.querySelector(".cards-template");
 const cardsContainer = document.querySelector(".cards-list");
 const buttonProfile = document.querySelector('.header__button-profile');
 const buttonCourses = document.querySelector('.header__button-courses');
 const buttonClean = document.querySelector('.filters__remove');
 const buttonsDeleteTag = document.querySelectorAll('.tag__delete');
-const levelFilter = document.getElementsByName('level')
-const statusFilter = document.getElementsByName('status')
+const levelFilter = document.getElementsByName('level');
+const statusFilter = document.getElementsByName('status');
 const activeChk = document.querySelector('#active');
 const inactiveChk = document.querySelector('#not-active');
 
@@ -18,7 +18,7 @@ filters.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     evt.target.classList.toggle('filters__category_active');
     const panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
+    if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
@@ -58,17 +58,17 @@ function showTags() {
 
 //открытие по клику в header
 buttonProfile.addEventListener('click', function () {
-  location = 'profile.html';
+    location = 'profile.html';
   }
 )
 buttonCourses.addEventListener('click', function () {
-  location = 'index.html';
+    location = 'index.html';
   }
 )
 
 // кнопка очистить
 function cleanFilters() {
-  inputs.forEach(function(el) {
+  inputs.forEach(function (el) {
     el.checked = false;
     // checkButtonClean();
   });
@@ -76,6 +76,7 @@ function cleanFilters() {
   renderCards();
   showTags();
 }
+
 buttonClean.addEventListener('click', cleanFilters)
 
 // кнопка тэга удалить
@@ -96,15 +97,15 @@ function deleteTags(tag) {
 buttonsDeleteTag.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     const parentTag = evt.target.closest('.tag');
-      deleteTags(parentTag);
-      showTags();
-      refresh();
-    });
+    deleteTags(parentTag);
+    showTags();
+    refresh();
+  });
 })
 
 // обновлеение состояния кнопки очистить и перерисовка карточек с учётом текущих фильтров
 function refresh() {
-  buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
+  buttonClean.style.visibility = document.querySelectorAll(":checked").length ? 'visible' : 'hidden';
   renderCards();
 }
 
@@ -118,7 +119,7 @@ function cardStatusChanged(button, title) {
   renderCards();
 }
 
-function createCard (obj) {
+function createCard(obj) {
   // const newCard = cardsTemplate.content.cloneNode(true);
   const newCard = cardsTemplate.content.querySelector('.card').cloneNode(true);
 
@@ -143,7 +144,7 @@ function createCard (obj) {
       break;
     case completed:
       button.classList.add('card__button_style_completed');
-      button.state='disabled'
+      button.state = 'disabled'
   }
   return newCard;
 }
@@ -161,10 +162,9 @@ function renderCards() {
   if (checkedLevels.length) // какие-то галки стоят на уровень
   {
     cardsToRender = cards.filter(e => checkedLevels.includes(e.initObject.level));
-  }
-  else
+  } else
     cardsToRender = cards;
-  const checkedStatuses= [...statusFilter].filter(e => e.checked).map(e => e.dataset.filter);
+  const checkedStatuses = [...statusFilter].filter(e => e.checked).map(e => e.dataset.filter);
   if (checkedStatuses.length) // какие-то галки стоят на статус-фильтре
   {
     cardsToRender = cardsToRender.filter(e => checkedStatuses.includes(e.initObject.status));

@@ -24,7 +24,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .form__input::placeholder {
   color: #9397A3;
-  ;
 }
 
 .form__input::-webkit-input-placeholder {

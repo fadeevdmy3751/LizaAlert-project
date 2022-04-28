@@ -12,51 +12,53 @@
 </head>
 <body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/icon-logo.svg" alt="Логотип учебной платформы">
+    <img alt="Логотип учебной платформы" class="header__logo" src="./images/icon-logo.svg">
     <nav class="header__nav">
-      <button type="button" class="header__button-courses"></button>
-      <button type="button" class="header__button-profile header__button-profile_active"></button>
+      <button class="header__button-courses" type="button"></button>
+      <button class="header__button-profile header__button-profile_active" type="button"></button>
     </nav>
   </header>
   <main class="profile-content">
     <h1 class="page-title">Профиль</h1>
     <div class="profile-account">
-      <img class="profile-account__avatar" src="./images/img-avatar.jpg" alt="Фотография пользователя">
+      <img alt="Фотография пользователя" class="profile-account__avatar" src="./images/img-avatar.jpg">
       <p class="profile-account__name">Иванова Анна Сидоровна</p>
       <ul class="profile-account__status">
         <li class="profile-account__status-item">
-          <img class="profile-account__icon" src="./images/icon-status.svg" alt="#">
+          <img alt="#" class="profile-account__icon" src="./images/icon-status.svg">
           <p class="profile-account__text">Профессионал</p>
         </li>
         <li class="profile-account__status-item">
-          <img class="profile-account__icon" src="./images/icon-badge.svg" alt="#">
+          <img alt="#" class="profile-account__icon" src="./images/icon-badge.svg">
           <p class="profile-account__text">Картограф</p>
         </li>
         <li class="profile-account__status-item">
-          <img class="profile-account__icon" src="./images/icon-courses.svg" alt="#">
+          <img alt="#" class="profile-account__icon" src="./images/icon-courses.svg">
           <p class="profile-account__text">Пройдено 2 курса</p>
         </li>
       </ul>
       <button class="profile-account__button-exit" type="button">
-        <img class="profile-account__button-icon" src="./images/icon-exit.svg" alt="#">
+        <img alt="#" class="profile-account__button-icon" src="./images/icon-exit.svg">
         <span class="profile-account__button-text">Выйти из аккаунта</span>
       </button>
     </div>
     <div class="form-container form-container_place_profile-data">
-      <form method="post" class="form form_type_personal-data">
+      <form class="form form_type_personal-data" method="post">
         <h2 class="form__title">Личные данные</h2>
         <fieldset class="form__fieldset">
-          <label for="full-name" class="form__label">ФИО</label>
-          <input type="text" class="form__input form__input_type_edit" id="full-name" name="full-name">
-          <label for="birth-date" class="form__label">Дата рождения</label>
-          <input type="date" class="form__input form__input_type_edit" id="birth-date" name="birth-date">
-          <label for="region" class="form__label">Географический регион</label>
-          <input type="text" class="form__input form__input_type_edit" id="region" name="region">
-          <label for="nickname" class="form__label">Позывной на форуме</label>
-          <input type="text" class="form__input form__input_type_edit" id="nickname" name="nickname">
-          <label for="photo" class="form__label">Фото</label>
-          <input type="file" disabled class="form__input form__input_type_attach" accept="image/jpeg" id="photo" name="file">
-          <button class="form__submit-btn form__submit-btn_submitted" type="submit" disabled>Сохранить&nbsp;изменения</button>
+          <label class="form__label" for="full-name">ФИО</label>
+          <input class="form__input form__input_type_edit" id="full-name" name="full-name" type="text">
+          <label class="form__label" for="birth-date">Дата рождения</label>
+          <input class="form__input form__input_type_edit" id="birth-date" name="birth-date" type="date">
+          <label class="form__label" for="region">Географический регион</label>
+          <input class="form__input form__input_type_edit" id="region" name="region" type="text">
+          <label class="form__label" for="nickname">Позывной на форуме</label>
+          <input class="form__input form__input_type_edit" id="nickname" name="nickname" type="text">
+          <label class="form__label" for="photo">Фото</label>
+          <input accept="image/jpeg" class="form__input form__input_type_attach" disabled id="photo" name="file"
+                 type="file">
+          <button class="form__submit-btn form__submit-btn_submitted" disabled type="submit">Сохранить&nbsp;изменения
+          </button>
         </fieldset>
       </form>
     </div>
@@ -73,16 +75,17 @@
       </ul>
     </div>
     <div class="form-container form-container_place_account-data">
-      <form method="post" class="form form_type_account">
+      <form class="form form_type_account" method="post">
         <h2 class="form__title">Аккаунт</h2>
         <fieldset class="form__fieldset">
-          <label for="phone-number" class="form__label">Номер телефона</label>
-          <input type="tel" class="form__input" id="phone-number" name="phone-number" placeholder="+7 123 456 78 90">
-          <label for="email" class="form__label">Email</label>
-          <input type="email" class="form__input form__input_type_edit" id="email" name="email">
-          <label for="password" class="form__label">Пароль</label>
-          <input type="password" class="form__input form__input_type_edit" id="password" name="password">
-          <button class="form__submit-btn form__submit-btn_submitted" type="submit" disabled>Сохранить&nbsp;изменения</button>
+          <label class="form__label" for="phone-number">Номер телефона</label>
+          <input class="form__input" id="phone-number" name="phone-number" placeholder="+7 123 456 78 90" type="tel">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input form__input_type_edit" id="email" name="email" type="email">
+          <label class="form__label" for="password">Пароль</label>
+          <input class="form__input form__input_type_edit" id="password" name="password" type="password">
+          <button class="form__submit-btn form__submit-btn_submitted" disabled type="submit">Сохранить&nbsp;изменения
+          </button>
         </fieldset>
       </form>
     </div>

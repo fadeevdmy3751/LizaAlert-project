@@ -12,35 +12,40 @@
 </head>
 <body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/icon-logo.svg" alt="Логотип учебной платформы">
+    <img alt="Логотип учебной платформы" class="header__logo" src="./images/icon-logo.svg">
     <nav class="header__nav">
-      <button type="button" class="header__button-courses header__button-courses_active"></button>
-      <button type="button" class="header__button-profile"></button>
+      <button class="header__button-courses header__button-courses_active" type="button"></button>
+      <button class="header__button-profile" type="button"></button>
     </nav>
   </header>
   <main class="index-content">
     <h1 class="page-title">Курсы</h1>
-    <section class="filters" aria-label="фильтры" >
+    <section aria-label="фильтры" class="filters">
       <fieldset class="filters__container">
-        <p class="filters__heading">Фильтры<button class="filters__remove" type="button" aria-label="Очистить">Очистить</button></p>
+        <p class="filters__heading">Фильтры
+          <button aria-label="Очистить" class="filters__remove" type="button">Очистить</button>
+        </p>
         <button class="filters__category">Категория</button>
         <div class="filters__panel"></div>
         <button class="filters__category">Тематика</button>
         <div class="filters__panel"></div>
         <button class="filters__category">Уровень</button>
         <div class="filters__panel">
-        <ul class="filters__list">
-          <li class="filters__item">
-            <input type="checkbox" name="level" id="novice" class="filters__input" value="novice" data-filter="Новичок" onchange="showTags()">
-            <label for="novice" class="filters__label">Новичок</label>
-          </li>
-          <li class="filters__item">
-            <input type="checkbox" name="level" id="experienced" class="filters__input" value="experienced" data-filter="Бывалый" onchange="showTags()">
-            <label for="experienced" class="filters__label">Бывалый</label>
-          </li>
+          <ul class="filters__list">
             <li class="filters__item">
-              <input type="checkbox" name="level" id="professional" class="filters__input" value="professional" data-filter="Профессионал" onchange="showTags()">
-              <label for="professional" class="filters__label">Профессионал</label>
+              <input class="filters__input" data-filter="Новичок" id="novice" name="level" onchange="showTags()" type="checkbox"
+                     value="novice">
+              <label class="filters__label" for="novice">Новичок</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__input" data-filter="Бывалый" id="experienced" name="level" onchange="showTags()"
+                     type="checkbox" value="experienced">
+              <label class="filters__label" for="experienced">Бывалый</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__input" data-filter="Профессионал" id="professional" name="level" onchange="showTags()"
+                     type="checkbox" value="professional">
+              <label class="filters__label" for="professional">Профессионал</label>
             </li>
           </ul>
         </div>
@@ -48,20 +53,24 @@
         <div class="filters__panel">
           <ul class="filters__list">
             <li class="filters__item">
-              <input type="checkbox" name="status" id="not-active" class="filters__input" value="not-active" data-filter="Пройден">
-              <label for="not-active" class="filters__label">Не активный</label>
+              <input class="filters__input" data-filter="Пройден" id="not-active" name="status" type="checkbox"
+                     value="not-active">
+              <label class="filters__label" for="not-active">Не активный</label>
             </li>
             <li class="filters__item">
-              <input type="checkbox" name="status" id="registered" class="filters__input" value="registered" data-filter="Продолжить">
-              <label for="registered" class="filters__label">Вы записаны</label>
+              <input class="filters__input" data-filter="Продолжить" id="registered" name="status" type="checkbox"
+                     value="registered">
+              <label class="filters__label" for="registered">Вы записаны</label>
             </li>
             <li class="filters__item">
-              <input type="checkbox" name="status" id="active" class="filters__input" value="active" data-filter="Записаться">
-              <label for="active" class="filters__label">Активный</label>
+              <input class="filters__input" data-filter="Записаться" id="active" name="status" type="checkbox"
+                     value="active">
+              <label class="filters__label" for="active">Активный</label>
             </li>
             <li class="filters__item">
-              <input type="checkbox" name="status" id="completed" class="filters__input" value="completed" data-filter="Пройден">
-              <label for="completed" class="filters__label">Пройден</label>
+              <input class="filters__input" data-filter="Пройден" id="completed" name="status" type="checkbox"
+                     value="completed">
+              <label class="filters__label" for="completed">Пройден</label>
             </li>
           </ul>
         </div>
@@ -69,24 +78,24 @@
       <div class="tags">
         <div class="tag tag-novice">
           <p class="tag__text">Новичок</p>
-          <button class="tag__delete" type="button" aria-label="Удалить"></button>
+          <button aria-label="Удалить" class="tag__delete" type="button"></button>
         </div>
         <div class="tag tag-experienced">
           <p class="tag__text">Бывалый</p>
-          <button class="tag__delete" type="button" aria-label="Удалить"></button>
+          <button aria-label="Удалить" class="tag__delete" type="button"></button>
         </div>
         <div class="tag tag-professional">
           <p class="tag__text">Профессионал</p>
-          <button class="tag__delete" type="button" aria-label="Удалить"></button>
+          <button aria-label="Удалить" class="tag__delete" type="button"></button>
         </div>
       </div>
     </section>
-    <section class="cards-list" aria-label="список курсов" >
+    <section aria-label="список курсов" class="cards-list">
     </section>
   </main>
   <template class="cards-template">
     <div class="card">
-      <img class="card__image" src="" alt="">
+      <img alt="" class="card__image" src="">
       <div class="card__texts">
         <h2 class="card__title"></h2>
         <span class="card__level"></span>
@@ -95,11 +104,11 @@
 
       <div class="card__options">
         <div class="card__lessons-info">
-          <img class="card__book-img" alt="иконка книга" src="./images/book.svg">
+          <img alt="иконка книга" class="card__book-img" src="./images/book.svg">
           <p class="card__lessons"></p>
         </div>
         <div class="card__clock-info">
-          <img class="card__clock-img" alt="иконка часы" src="./images/clock.svg">
+          <img alt="иконка часы" class="card__clock-img" src="./images/clock.svg">
           <p class="card__clock"></p>
         </div>
         <button class="card__button"></button>
