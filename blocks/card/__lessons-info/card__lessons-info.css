@@ -1,0 +1,6 @@
+.card__lessons-info{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  /* justify-content: end; */
+}

@@ -21,8 +21,6 @@
 @import url(../blocks/profile-account/__button-exit/profile-account__button-exit.css);
 @import url(../blocks/profile-account/__button-icon/profile-account__button-icon.css);
 @import url(../blocks/profile-account/__button-text/profile-account__button-text.css);
-@import url(../blocks/profile-data/profile-data.css);
-@import url(../blocks/profile-text/profile-text.css);
 @import url(../blocks/profile-content/profile-content.css);
 
 /* ================================Form================================ */
@@ -38,8 +36,7 @@
 @import url(../blocks/form/__input/_type/form__input_type_edit.css);
 @import url(../blocks/form/__input/_type/form__input_type_attach.css);
 @import url(../blocks/form/__submit-btn/form__submit-btn.css);
-@import url(../blocks/form/__submit-btn/_type/form__submit-btn_type_unsubmitted.css);
-@import url(../blocks/form/__submit-btn/_type/form__submit-btn_type_submitted.css);
+@import url(../blocks/form/__submit-btn/_submitted/form__submit-btn_submitted.css);
 
 /* ================================Text-block================================ */
 @import url(../blocks/text-tips/text-tips.css);
