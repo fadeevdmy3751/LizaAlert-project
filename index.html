@@ -21,7 +21,6 @@
   <main class="index-content">
     <h1 class="page-title">Курсы</h1>
     <section class="filters" aria-label="фильтры" >
-<!--      //TODO не хватает формы!-->
       <fieldset class="filters__container">
         <p class="filters__heading">Фильтры<button class="filters__remove" type="button" aria-label="Очистить">Очистить</button></p>
         <button class="filters__category">Категория</button>
@@ -49,19 +48,19 @@
         <div class="filters__panel">
           <ul class="filters__list">
             <li class="filters__item">
-              <input type="checkbox" name="status" id="not-active" class="filters__input" value="not-active" data-group="mutual" data-filter="completed">
+              <input type="checkbox" name="status" id="not-active" class="filters__input" value="not-active" data-filter="Пройден">
               <label for="not-active" class="filters__label">Не активный</label>
             </li>
             <li class="filters__item">
-              <input type="checkbox" name="status" id="registered" class="filters__input" value="registered" data-filter="registered">
+              <input type="checkbox" name="status" id="registered" class="filters__input" value="registered" data-filter="Продолжить">
               <label for="registered" class="filters__label">Вы записаны</label>
             </li>
             <li class="filters__item">
-              <input type="checkbox" name="status" id="active" class="filters__input" value="active" data-group="mutual" data-filter="active">
+              <input type="checkbox" name="status" id="active" class="filters__input" value="active" data-filter="Записаться">
               <label for="active" class="filters__label">Активный</label>
             </li>
             <li class="filters__item">
-              <input type="checkbox" name="status" id="completed" class="filters__input" value="completed" data-filter="completed">
+              <input type="checkbox" name="status" id="completed" class="filters__input" value="completed" data-filter="Пройден">
               <label for="completed" class="filters__label">Пройден</label>
             </li>
           </ul>
@@ -103,11 +102,10 @@
           <img class="card__clock-img" alt="иконка часы" src="./images/clock.svg">
           <p class="card__clock"></p>
         </div>
-        <button class="card__button"></button> <!-- в зависимости от статуса кнопки дменять class= "button_white button_orange button_grey" -->
+        <button class="card__button"></button>
       </div>
     </div>
   </template>
-  <script src="./scripts/initialFilters.js"></script>
   <script src="./scripts/initialCards.js"></script>
   <script src="./scripts/index.js"></script>
 </body>

@@ -26,60 +26,16 @@ filters.forEach(function (item) {
   })
 })
 
-// function filter (category, cards) {
-//   cards.forEach((card) => {
-//     // проверяем категорию
-//     const isItemFiltered = !card.classList.contains(category) // переписать кака будет
-//     // если категории нет,прячем
-//     if (isItemFiltered) {
-//       card.classList.add('hide')
-//       // удаляем класс hide
-//     } else {
-//       card.classList.remove('hide')
-//     }
-//   })
-// }
-// лиснеры на чекбоксы, +- работают, доработать фильтер
+
 inputs.forEach((item) => {
   item.addEventListener("click", (el) => {
     if (el.target.id === 'active' && el.target.checked === true) inactiveChk.checked = false;
     if (el.target.id === 'not-active' && el.target.checked === true) activeChk.checked = false;
     // if ([...levelFilter].filter(e => e.checked).length == 3)
     //  levelFilter.forEach(e => e.checked = false)
-    const currentCategory = item.dataset.filter;
-    // filter(currentCategory, cards);
-    // функционал по актуализации данных в масииве initialFilters
-    // запуск renderCards()
-    checkButtonClean();
+    refresh();
   });
 });
-
-// фильтр карточек commented
-// not working
-// function filterCards() {
-//   function filter (category, cards) {
-//     cards.forEach((card) => {
-//     // проверяем категорию
-//       const isItemFiltered = !card.classList.contains(category)
-//     // если категории нет,прячем
-//         if (isItemFiltered) {
-//           card.classList.add('hide')
-//     // удаляем класс hide
-//             } else {
-//             card.classList.remove('hide')
-//             }
-//     })
-//   }
-//   inputs.forEach((item) => {
-//     item.addEventListener("click", () => {
-//       const currentCategory = item.dataset.filter;
-//       filter(currentCategory, cards);
-//       checkButtonClean();
-//     });
-//   });
-// }
-
-// filterCards(); вызывать по кликам, изначальный перенесен выше
 
 // тэги уровней под фильтрами
 function showTags() {
@@ -114,7 +70,7 @@ buttonCourses.addEventListener('click', function () {
 function cleanFilters() {
   inputs.forEach(function(el) {
     el.checked = false;
-    //checkButtonClean();
+    // checkButtonClean();
   });
   buttonClean.style.visibility = 'hidden';
   renderCards();
@@ -136,36 +92,30 @@ function deleteTags(tag) {
     document.querySelector('#professional').checked = false;
   }
 }
-//
+
 buttonsDeleteTag.forEach(function (item) {
   item.addEventListener('click', function (evt) {
     const parentTag = evt.target.closest('.tag');
       deleteTags(parentTag);
       showTags();
-      checkButtonClean();
+      refresh();
     });
 })
 
-// состояние кнопки очистить
-
-function checkButtonClean() {
-  //todo rename с учетом renderCards
+// обновлеение состояния кнопки очистить и перерисовка карточек с учётом текущих фильтров
+function refresh() {
   buttonClean.style.visibility=document.querySelectorAll(":checked").length ? 'visible': 'hidden';
   renderCards();
 }
 
 function cardStatusChanged(button, title) {
-  console.log(button, typeof button);//todo
-  let currentCard = cards.find(card => card.initObject.title === title);
+  const currentCard = cards.find(card => card.initObject.title === title);
   if (currentCard.initObject.status === available) {
     button.textContent = 'Продолжить';
     button.className = 'card__button card__button_style_inProgress';
     currentCard.initObject.status = inProgress;
   }
-  //console.log(cards);
-  // найти карточку с нужным title
-  // заменить статус
-  // внести изменение в массив
+  renderCards();
 }
 
 function createCard (obj) {
@@ -179,7 +129,7 @@ function createCard (obj) {
   newCard.querySelector(".card__description").textContent = obj.text;
   newCard.querySelector(".card__lessons").textContent = obj.lessonsAmount;
   newCard.querySelector(".card__clock").textContent = obj.duration;
-  //todo
+
   newCard.initObject = obj;
   const button = newCard.querySelector(".card__button");
   button.textContent = obj.status;
@@ -207,33 +157,19 @@ function renderCards() {
     cardsContainer.removeChild(cardsContainer.lastChild);
   let cardsToRender = [];
   // если переделывать рендеринг фильтров, то строчка ниже изменится
-  let checkedLevels = [...levelFilter].filter(e => e.checked).map(e => e.dataset.filter);
-  if (checkedLevels.length) // какието галки стоят на уровень
+  const checkedLevels = [...levelFilter].filter(e => e.checked).map(e => e.dataset.filter);
+  if (checkedLevels.length) // какие-то галки стоят на уровень
   {
     cardsToRender = cards.filter(e => checkedLevels.includes(e.initObject.level));
   }
   else
     cardsToRender = cards;
-  //a = a.concat(b)
-
-//todo второй фильр
-
-  // initialCards.forEach(el => {
-  //   const newCard = createCard(el);
-    // console.log(newCard);
-    // получаем текущее актуальное состояние фильтров
-    // т.к. обращение к initialFilters[levelFilters, statusFilters]
-    // заходим в levelFilters и оттуда выбираем те значения, у которых true -> кладём в actualLevelFiltersArray
-    // заходим в statusFilters и оттуда выбираем те значения, у которых true -> кладём в actualStatusFiltersArray
-    // if actualLevelFiltersArray.length != 0
-    //    bool currentLevelExists = el[level] in actualLevelFiltersArray
-    // if actualStatusFiltersArray.length != 0
-    //    bool currentStatusExists = el[level] in actualStatusFiltersArray
-    //
-    // те фильтры, которые работают -> сверка с итерируемой карточкой
-    //  if
-    cardsContainer.append(...cardsToRender);
-  // });
+  const checkedStatuses= [...statusFilter].filter(e => e.checked).map(e => e.dataset.filter);
+  if (checkedStatuses.length) // какие-то галки стоят на статус-фильтре
+  {
+    cardsToRender = cardsToRender.filter(e => checkedStatuses.includes(e.initObject.status));
+  }
+  cardsContainer.append(...cardsToRender);
 }
 
 renderCards();
