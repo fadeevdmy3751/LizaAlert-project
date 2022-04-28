@@ -44,8 +44,8 @@ inputs.forEach((item) => {
   item.addEventListener("click", (el) => {
     if (el.target.id === 'active' && el.target.checked === true) inactiveChk.checked = false;
     if (el.target.id === 'not-active' && el.target.checked === true) activeChk.checked = false;
-    if ([...levelFilter].filter(e => e.checked).length == 3)
-      levelFilter.forEach(e => e.checked = false)
+    // if ([...levelFilter].filter(e => e.checked).length == 3)
+    //  levelFilter.forEach(e => e.checked = false)
     const currentCategory = item.dataset.filter;
     // filter(currentCategory, cards);
     // функционал по актуализации данных в масииве initialFilters
@@ -114,8 +114,10 @@ buttonCourses.addEventListener('click', function () {
 function cleanFilters() {
   inputs.forEach(function(el) {
     el.checked = false;
-    checkButtonClean();
+    //checkButtonClean();
   });
+  buttonClean.style.visibility = 'hidden';
+  renderCards();
   showTags();
 }
 buttonClean.addEventListener('click', cleanFilters)
@@ -154,6 +156,13 @@ function checkButtonClean() {
 
 function cardStatusChanged(button, title) {
   console.log(button, typeof button);//todo
+  let currentCard = cards.find(card => card.initObject.title === title);
+  if (currentCard.initObject.status === available) {
+    button.textContent = 'Продолжить';
+    button.className = 'card__button card__button_style_inProgress';
+    currentCard.initObject.status = inProgress;
+  }
+  //console.log(cards);
   // найти карточку с нужным title
   // заменить статус
   // внести изменение в массив
@@ -197,6 +206,7 @@ function renderCards() {
   while (cardsContainer.firstChild)
     cardsContainer.removeChild(cardsContainer.lastChild);
   let cardsToRender = [];
+  // если переделывать рендеринг фильтров, то строчка ниже изменится
   let checkedLevels = [...levelFilter].filter(e => e.checked).map(e => e.dataset.filter);
   if (checkedLevels.length) // какието галки стоят на уровень
   {
@@ -206,7 +216,7 @@ function renderCards() {
     cardsToRender = cards;
   //a = a.concat(b)
 
-//todo второй фильр 
+//todo второй фильр
 
   // initialCards.forEach(el => {
   //   const newCard = createCard(el);
