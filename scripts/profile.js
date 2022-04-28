@@ -1,13 +1,10 @@
 //открытие курсов по клику в header
 const buttonCourses = document.querySelector('.header__button-courses');
-
 buttonCourses.addEventListener('click', function () {
   location = 'index.html';
   }
 )
-
 const buttonProfile = document.querySelector('.header__button-profile');
-
 buttonProfile.addEventListener('click', function () {
   location = 'profile.html';
   }
@@ -21,44 +18,31 @@ const accountForm = profilePage.querySelector('.form_type_account'); // Форм
 const personalDataBtn = personalDataForm.querySelector('.form__submit-btn'); // Кнопка в форме с личными данными
 const accountBtn = accountForm.querySelector('.form__submit-btn'); // Кнопка в форме Аккаунт
 
-function changeButton (button) {
-  if (button.classList.contains('form__submit-btn_type_unsubmitted')) {   // Функция для изменения класса кнопки
-    button.classList.remove('form__submit-btn_type_unsubmitted');
-    button.classList.add('form__submit-btn_type_submitted');
-  } else {(button.classList.contains('form__submit-btn_type_submitted'))
-    button.classList.remove('form__submit-btn_type_submitted');
-    button.classList.add('form__submit-btn_type_unsubmitted');
-}}
-
-function personalDataFormSubmit (evt) {
+function submitBtnPressed (evt) {
   evt.preventDefault();
-  changeButton(personalDataBtn);
+  const button = evt.target.querySelector('.form__submit-btn')
+  button.classList.add('form__submit-btn_submitted');
+  // сюда положить процессинг данных
+  button.disabled = true;
 }
 
-personalDataForm.addEventListener('submit', personalDataFormSubmit); // Кнопка окрашивается в серый при нажатии в форме с личными данными;
+// Кнопка окрашивается в серый при нажатии
+personalDataForm.addEventListener('submit', submitBtnPressed);
+accountForm.addEventListener('submit', submitBtnPressed);
 
-function accountFormSubmit (evt) {
-  evt.preventDefault();
-  changeButton(accountBtn);
-}
+const allInputs = document.querySelectorAll('.form__input'); //все инпуты
 
-accountForm.addEventListener('submit', accountFormSubmit); // Кнопка окрашивается в серый при нажатии в форме Аккаунт;
-
-const personalDataFormInputs = personalDataForm.querySelectorAll('.form__input'); // Все инпуты из формы с личными данными;
-const accountFormInputs = accountForm.querySelectorAll('.form__input'); // Все инпуты из формы Аккаунт;
-
-personalDataFormInputs.forEach(function(input) {
-  input.addEventListener('focusout', function () {
-    if (personalDataBtn.classList.contains('form__submit-btn_type_submitted')) {    // Кнопка окрашивается в оранжевый после ввода данных в поля Личные данные
-      changeButton(personalDataBtn)
-    }
-  });
+allInputs.forEach(function(input) {
+  const button = input.closest('.form__fieldset').querySelector('.form__submit-btn');
+  // input.addEventListener('change', function () {   // отрабатывает хуже, только после ухода с поля
+  input.addEventListener('input', function () {
+      button.classList.remove('form__submit-btn_submitted') ;   // Кнопка окрашивается в оранжевый после ввода данных в поля Личные данные
+    button.disabled = false;
+  })
 })
 
-accountFormInputs.forEach(function(input) {
-  input.addEventListener('focusout', function () {
-    if (accountBtn.classList.contains('form__submit-btn_type_submitted')) {    // Кнопка окрашивается в оранжевый после ввода данных в поля Аккаунт
-      changeButton(accountBtn)
-    }
-  });
-})
+
+
+
+
+

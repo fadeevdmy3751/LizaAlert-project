@@ -36,8 +36,7 @@
 @import url(../blocks/form/__input/_type/form__input_type_edit.css);
 @import url(../blocks/form/__input/_type/form__input_type_attach.css);
 @import url(../blocks/form/__submit-btn/form__submit-btn.css);
-@import url(../blocks/form/__submit-btn/_type/form__submit-btn_type_unsubmitted.css);
-@import url(../blocks/form/__submit-btn/_type/form__submit-btn_type_submitted.css);
+@import url(../blocks/form/__submit-btn/_submitted/form__submit-btn_submitted.css);
 
 /* ================================Text-block================================ */
 @import url(../blocks/text-tips/text-tips.css);
