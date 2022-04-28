@@ -39,6 +39,7 @@
 @import url(../blocks/card/__subtitle/card__subtitle.css);
 @import url(../blocks/card/__image/card__image.css);
 @import url(../blocks/card/__texts/card__texts.css);
+@import url(../blocks/card/__description/card__description.css);
 @import url(../blocks/card/__options/card__options.css);
 @import url(../blocks/card/__lessons-info/card__lessons-info.css);
 @import url(../blocks/card/__book-img/card__book-img.css);

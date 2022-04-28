@@ -19,5 +19,5 @@
 .filters__category:after {
   content: url(../../../images/filter-item_open.svg);
   float: right;
-  margin-left: 15px;
+  margin: -3px 7px 0 0;
 }
