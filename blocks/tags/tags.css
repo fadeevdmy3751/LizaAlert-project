@@ -1,6 +1,8 @@
 .tags {
   width: 312px;
   margin: 32px 24px 0 0;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 

@@ -25,11 +25,9 @@
         <p class="filters__heading">Фильтры
           <button aria-label="Очистить" class="filters__remove" type="button">Очистить</button>
         </p>
-        <button class="filters__category">Категория</button>
-        <div class="filters__panel"></div>
-        <button class="filters__category">Тематика</button>
-        <div class="filters__panel"></div>
-        <button class="filters__category">Уровень</button>
+        <button class="filters__category" type="button">Категория</button>
+        <button class="filters__category" type="button">Тематика</button>
+        <button class="filters__category" type="button">Уровень</button>
         <div class="filters__panel">
           <ul class="filters__list">
             <li class="filters__item">
@@ -49,7 +47,7 @@
             </li>
           </ul>
         </div>
-        <button class="filters__category">Статус</button>
+        <button class="filters__category" type="button">Статус</button>
         <div class="filters__panel">
           <ul class="filters__list">
             <li class="filters__item">
@@ -75,20 +73,20 @@
           </ul>
         </div>
       </fieldset>
-      <div class="tags">
-        <div class="tag tag-novice">
+      <ul class="tags">
+        <li class="tag tag-novice">
           <p class="tag__text">Новичок</p>
           <button aria-label="Удалить" class="tag__delete" type="button"></button>
-        </div>
-        <div class="tag tag-experienced">
+        </li>
+        <li class="tag tag-experienced">
           <p class="tag__text">Бывалый</p>
           <button aria-label="Удалить" class="tag__delete" type="button"></button>
-        </div>
-        <div class="tag tag-professional">
+        </li>
+        <li class="tag tag-professional">
           <p class="tag__text">Профессионал</p>
           <button aria-label="Удалить" class="tag__delete" type="button"></button>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
     <section aria-label="список курсов" class="cards-list">
     </section>
