@@ -20,4 +20,5 @@
   content: url(../../../images/filter-item_open.svg);
   float: right;
   margin: -3px 7px 0 0;
+  transition: 0.4s;
 }
