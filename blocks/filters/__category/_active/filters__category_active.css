@@ -1,5 +1,4 @@
 .filters__category_active:after {
-  /*content: url(../../../../images/filter-item_close.svg);*/
   transform: rotate(180deg);
   margin-top: 3px;
   margin-bottom: -3px;
