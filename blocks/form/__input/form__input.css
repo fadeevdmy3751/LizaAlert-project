@@ -8,6 +8,9 @@
   font-size: 18px;
   line-height: 1.3;
   color: #212329;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center right 16px;
 }
 
 .form__input:focus {
@@ -22,18 +25,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
-.form__input::placeholder {
-  color: #9397A3;
-}
 
-.form__input::-webkit-input-placeholder {
-  color: #9397A3;
-}
-
-.form__input::-moz-placeholder {
-  color: #9397A3;
-}
-
-.form__input::-ms-input-placeholder {
-  color: #9397A3;
-}
+.form__input::-webkit-input-placeholder {color: #9397A3;}
+.form__input::-moz-placeholder {color: #9397A3;}
+.form__input::-ms-input-placeholder {color: #9397A3;}
+.form__input::placeholder {color: #9397A3;}

@@ -14,6 +14,7 @@
   color: #fff;
 }
 
-.form__submit-btn:hover:enabled {
+.form__submit-btn:hover {
   cursor: pointer;
+  opacity: .7;
 }
