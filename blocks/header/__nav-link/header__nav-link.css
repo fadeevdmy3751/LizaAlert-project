@@ -1,0 +1,14 @@
+.header__nav-link {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: #212329;
+}
+
+.header__nav-link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

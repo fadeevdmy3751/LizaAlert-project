@@ -3,8 +3,8 @@ const inputs = document.querySelectorAll('.filters__input'); // все чекб�
 
 const cardsTemplate = document.querySelector(".cards-template");
 const cardsContainer = document.querySelector(".cards-list");
-const buttonProfile = document.querySelector('.header__button-profile');
-const buttonCourses = document.querySelector('.header__button-courses');
+const linkHeaderCourses = document.querySelector('.header__nav-link-courses');
+const linkHeaderProfile = document.querySelector('.header__nav-link-profile');
 const buttonClean = document.querySelector('.filters__remove');
 const buttonsDeleteTag = document.querySelectorAll('.tag__delete');
 const levelFilter = document.getElementsByName('level');
@@ -57,12 +57,12 @@ function showTags() {
 }
 
 //открытие по клику в header
-buttonProfile.addEventListener('click', function () {
-    location = 'profile.html';
+linkHeaderCourses.addEventListener('click', function () {
+    location = 'index.html';
   }
 )
-buttonCourses.addEventListener('click', function () {
-    location = 'index.html';
+linkHeaderProfile.addEventListener('click', function () {
+    location = 'profile.html';
   }
 )
 

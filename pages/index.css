@@ -6,10 +6,10 @@
 @import url(../blocks/page-title/page-title.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__nav/header__nav.css);
-@import url(../blocks/header/__button-courses/header__button-courses.css);
-@import url(../blocks/header/__button-courses/_active/header__button-courses_active.css);
-@import url(../blocks/header/__button-profile/header__button-profile.css);
-@import url(../blocks/header/__button-profile/_active/header__button-profile_active.css);
+@import url(../blocks/header/__nav-links/header__nav-links.css);
+@import url(../blocks/header/__nav-link/header__nav-link.css);
+@import url(../blocks/header/__nav-link/_active/header__nav-link_active.css);
+
 
 @import url(../blocks/index-content/index-content.css);
 @import url(../blocks/page-title/page-title.css);

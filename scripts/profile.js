@@ -1,11 +1,11 @@
 //открытие курсов по клику в header
-const buttonCourses = document.querySelector('.header__button-courses');
-buttonCourses.addEventListener('click', function () {
+const linkHeaderCourses = document.querySelector('.header__nav-link-courses');
+const linkHeaderProfile = document.querySelector('.header__nav-link-profile');
+linkHeaderCourses.addEventListener('click', function () {
     location = 'index.html';
   }
 )
-const buttonProfile = document.querySelector('.header__button-profile');
-buttonProfile.addEventListener('click', function () {
+linkHeaderProfile.addEventListener('click', function () {
     location = 'profile.html';
   }
 )
