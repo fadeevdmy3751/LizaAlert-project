@@ -30,12 +30,12 @@
 
 @import url(../blocks/tags/tags.css);
 @import url(../blocks/tag/tag.css);
+@import url(../blocks/tag/_place_card/tag_place_card.css);
 @import url(../blocks/tag/__text/tag__text.css);
 @import url(../blocks/tag/__delete/tag__delete.css);
 @import url(../blocks/card/card.css);
 @import url(../blocks/cards-list/cards-list.css);
 @import url(../blocks/card/__title/card__title.css);
-@import url(../blocks/card/__level/card__level.css);
 @import url(../blocks/card/__subtitle/card__subtitle.css);
 @import url(../blocks/card/__image/card__image.css);
 @import url(../blocks/card/__texts/card__texts.css);
