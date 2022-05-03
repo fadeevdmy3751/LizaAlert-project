@@ -3,3 +3,7 @@
   color: #FF6600;
   border: 1.2px solid #E6E7EB;
 }
+
+.card__button_style_available:hover {
+  opacity: 0.7;
+}

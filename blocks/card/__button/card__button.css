@@ -1,6 +1,6 @@
 .card__button {
   width: 224px;
-  height: 48px;
+  min-height: 48px;
   border-radius: 16px;
   border: none;
   text-align: center;
@@ -12,3 +12,4 @@
   padding: 12px 24px 12px 24px;
   cursor: pointer;
 }
+
