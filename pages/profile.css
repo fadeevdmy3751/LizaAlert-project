@@ -21,7 +21,8 @@
 @import url(../blocks/profile-account/__button-exit/profile-account__button-exit.css);
 @import url(../blocks/profile-account/__button-icon/profile-account__button-icon.css);
 @import url(../blocks/profile-account/__button-text/profile-account__button-text.css);
-@import url(../blocks/profile-content/profile-content.css);
+@import url(../blocks/main-content/main-content.css);
+@import url(../blocks/main-content/__profile/main-content__profile.css);
 
 /* ================================Form================================ */
 

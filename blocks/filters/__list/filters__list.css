@@ -2,6 +2,10 @@
   display: block;
   width: 248px;
   padding: 0;
-  margin: 0 auto 28px;
+  margin: 0 auto 0;
   list-style: none;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s linear;
 }

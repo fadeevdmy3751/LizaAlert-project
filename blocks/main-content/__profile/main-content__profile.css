@@ -1,8 +1,4 @@
-.profile-content {
-  max-width: 1320px;
-  margin: 24px 60px 0;
-  display: grid;
-  gap: 24px;
+.main-content__profile {
   grid-template-areas:
     "page-title . ."
     "profile-account profile-data profile-text-personal-data"

@@ -9,12 +9,10 @@
   flex-direction: row;
   padding: 0;
   transition: border 0.3s linear;
-
 }
 
 .profile-account__button-exit:hover {
   cursor: pointer;
   border: 1.2px solid #FF6600;
-
 }
 

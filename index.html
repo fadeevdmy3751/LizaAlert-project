@@ -24,7 +24,7 @@
       </ul>
     </nav>
   </header>
-  <main class="index-content">
+  <main class="main-content main-content__index">
     <h1 class="page-title">Курсы</h1>
     <section aria-label="фильтры" class="filters">
       <fieldset class="filters__container">
@@ -34,50 +34,46 @@
         <button class="filters__category" type="button">Категория</button>
         <button class="filters__category" type="button">Тематика</button>
         <button class="filters__category" type="button">Уровень</button>
-        <div class="filters__panel">
-          <ul class="filters__list">
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Новичок" id="novice" name="level" onchange="showTags()" type="checkbox"
+        <ul class="filters__list">
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Новичок" id="novice" name="level" onchange="showTags()" type="checkbox"
                      value="novice">
-              <label class="filters__label" for="novice">Новичок</label>
-            </li>
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Бывалый" id="experienced" name="level" onchange="showTags()"
+            <label class="filters__label" for="novice">Новичок</label>
+          </li>
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Бывалый" id="experienced" name="level" onchange="showTags()"
                      type="checkbox" value="experienced">
-              <label class="filters__label" for="experienced">Бывалый</label>
-            </li>
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Профессионал" id="professional" name="level" onchange="showTags()"
+            <label class="filters__label" for="experienced">Бывалый</label>
+          </li>
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Профессионал" id="professional" name="level" onchange="showTags()"
                      type="checkbox" value="professional">
-              <label class="filters__label" for="professional">Профессионал</label>
-            </li>
-          </ul>
-        </div>
+            <label class="filters__label" for="professional">Профессионал</label>
+          </li>
+        </ul>
         <button class="filters__category" type="button">Статус</button>
-        <div class="filters__panel">
-          <ul class="filters__list">
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Пройден" id="not-active" name="status" type="checkbox"
+        <ul class="filters__list">
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Пройден" id="not-active" name="status" type="checkbox"
                      value="not-active">
-              <label class="filters__label" for="not-active">Не активный</label>
-            </li>
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Продолжить" id="registered" name="status" type="checkbox"
+            <label class="filters__label" for="not-active">Не активный</label>
+          </li>
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Продолжить" id="registered" name="status" type="checkbox"
                      value="registered">
-              <label class="filters__label" for="registered">Вы записаны</label>
-            </li>
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Записаться" id="active" name="status" type="checkbox"
+            <label class="filters__label" for="registered">Вы записаны</label>
+          </li>
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Записаться" id="active" name="status" type="checkbox"
                      value="active">
-              <label class="filters__label" for="active">Активный</label>
-            </li>
-            <li class="filters__item">
-              <input class="filters__input" data-filter="Пройден" id="completed" name="status" type="checkbox"
+            <label class="filters__label" for="active">Активный</label>
+          </li>
+          <li class="filters__item">
+            <input class="filters__input" data-filter="Пройден" id="completed" name="status" type="checkbox"
                      value="completed">
-              <label class="filters__label" for="completed">Пройден</label>
-            </li>
-          </ul>
-        </div>
+            <label class="filters__label" for="completed">Пройден</label>
+          </li>
+        </ul>
       </fieldset>
       <ul class="tags">
         <li class="tag tag-novice">Новичок
@@ -102,18 +98,17 @@
         <span class="tag tag_place_card"></span>
         <p class="card__paragraph card__description"></p>
       </div>
-
-      <div class="card__options">
-        <div class="card__lessons-info">
+      <ul class="card__options">
+        <li class="card__lessons-info">
           <img alt="иконка книга" class="card__icon" src="./images/book.svg">
           <p class="card__paragraph card__lessons"></p>
-        </div>
-        <div class="card__clock-info">
+        </li>
+        <li class="card__clock-info">
           <img alt="иконка часы" class="card__icon" src="./images/clock.svg">
           <p class="card__paragraph card__clock"></p>
-        </div>
-        <button class="card__button" type="button"></button>
-      </div>
+        </li>
+        <li><button class="card__button" type="button"></button></li>
+      </ul>
     </div>
   </template>
   <script src="./scripts/initialCards.js"></script>

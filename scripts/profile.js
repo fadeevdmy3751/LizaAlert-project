@@ -11,7 +11,7 @@ linkHeaderProfile.addEventListener('click', function () {
 )
 
 //////////// Работа с кнопками форм ////////////
-const profilePage = document.querySelector('.profile-content');
+const profilePage = document.querySelector('.main-content__profile');
 const personalDataForm = profilePage.querySelector('.form_type_personal-data'); // Форма с личными данными
 const accountForm = profilePage.querySelector('.form_type_account'); // Форма Аккаунт
 
