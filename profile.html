@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <meta content="Платформа для обучения добровольцев ЛизаАлерт - Профиль" name="description">
+  <meta content="LizaAlert, ЛизаАлерт" name="keywords">
+  <meta content="Дмитрий Фадеев, Евгения Костыря, Елизавета Циприс, Михаил Чумаков, Руслан Афиншаков" name="author">
+  <title>Профиль</title>
+  <link href="pages/profile.css" rel="stylesheet">
+</head>
+<body class="page">
+  <header class="header">
+    <img alt="Логотип учебной платформы" class="header__logo" src="./images/icon-logo.svg">
+    <nav class="header__nav">
+      <ul class="header__nav-links">
+        <li><a class="header__nav-link header__nav-link-courses">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="m20.49 6.19-1-.55-9-5h-.11a1.06 1.06 0 0 0-.19-.06h-.37a1.17 1.17 0 0 0-.2.06h-.11l-9 5a1 1 0 0 0 0 1.74L3 8.76v4.74a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8.76l2-1.12v2.86a1 1 0 1 0 2 0V7.06a1 1 0 0 0-.51-.87ZM15 13.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9.87l4.51 2.5.15.06h.09c.083.01.167.01.25 0 .083.01.167.01.25 0h.09a.47.47 0 0 0 .15-.06L15 9.87v3.63Zm-5-3.14L3.06 6.5 10 2.64l6.94 3.86L10 10.36Z"/></svg>
+          Курсы</a></li>
+        <li><a class="header__nav-link header__nav-link_active header__nav-link-profile">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-7.35 16.76 10.001 10.001 0 0 0 14.7 0A10 10 0 0 0 12 2Zm0 18a8 8 0 0 1-5.55-2.25 6 6 0 0 1 11.1 0A8 8 0 0 1 12 20Zm-2-10a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm8.91 6A8 8 0 0 0 15 12.62a4 4 0 1 0-6 0A8 8 0 0 0 5.09 16 7.92 7.92 0 0 1 4 12a8 8 0 1 1 16 0 7.92 7.92 0 0 1-1.09 4Z"/></svg>
+          Профиль</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content main-content__profile">
+    <h1 class="page-title">Профиль</h1>
+    <div class="profile-account">
+      <img alt="Фотография пользователя" class="profile-account__avatar" src="./images/img-avatar.jpg">
+      <p class="profile-account__name">Иванова Анна Сидоровна</p>
+      <ul class="profile-account__status">
+        <li class="profile-account__status-item">
+          <img alt="#" class="profile-account__icon" src="./images/icon-status.svg">
+          <p class="profile-account__text">Профессионал</p>
+        </li>
+        <li class="profile-account__status-item">
+          <img alt="#" class="profile-account__icon" src="./images/icon-badge.svg">
+          <p class="profile-account__text">Картограф</p>
+        </li>
+        <li class="profile-account__status-item">
+          <img alt="#" class="profile-account__icon" src="./images/icon-courses.svg">
+          <p class="profile-account__text">Пройдено 2 курса</p>
+        </li>
+      </ul>
+      <button class="profile-account__button-exit" type="button">
+        <img alt="#" class="profile-account__button-icon" src="./images/icon-exit.svg">
+        <span class="profile-account__button-text">Выйти из аккаунта</span>
+      </button>
+    </div>
+
+    <form class="form form_type_personal-data" method="post" name="personal-data-form">
+      <h2 class="form__title">Личные данные</h2>
+      <fieldset class="form__fieldset">
+        <label class="form__label" for="full-name">ФИО</label>
+        <input class="form__input form__input_type_edit" id="full-name" name="full-name" type="text">
+        <label class="form__label" for="birth-date">Дата рождения</label>
+        <input class="form__input form__input_type_edit" id="birth-date" name="birth-date" type="date">
+        <label class="form__label" for="region">Географический регион</label>
+        <input class="form__input form__input_type_edit" id="region" name="region" type="text">
+        <label class="form__label" for="nickname">Позывной на форуме</label>
+        <input class="form__input form__input_type_edit" id="nickname" name="nickname" type="text">
+        <label class="form__label" for="photo">Фото</label>
+        <input accept="image/jpeg" class="form__input form__input_type_attach" disabled id="photo" name="file"
+                 type="file">
+        <button class="form__submit-btn form__submit-btn_submitted" disabled type="submit">Сохранить&nbsp;изменения
+          </button>
+      </fieldset>
+    </form>
+
+    <div class="text-tips text-tips_place_personal-data">
+      <p class="text-tips__paragraph">Просьба указывать настоящие ФИО, это нужно для получения сертификатов</p>
+      <p class="text-tips__paragraph">Географический регион влияет на&nbsp;доступность некоторых курсов и&nbsp;занятий</p>
+      <p class="text-tips__paragraph">Если вы&nbsp;не&nbsp;хотите, чтобы другие пользователи видели ваши ФИО,
+        укажите позывной на&nbsp;форуме&nbsp;&mdash; он&nbsp;будет отображаться вместо ваших настоящих данных
+      </p>
+      <p class="text-tips__paragraph">Требования к&nbsp;загружаемому фото:</p>
+      <ul class="text-tips__list">
+        <li class="text-tips__list-item">разрешение не&nbsp;менее 640&times;640px</li>
+        <li class="text-tips__list-item">размер не&nbsp;более 3&nbsp;МБ</li>
+      </ul>
+    </div>
+
+    <form class="form form_type_account" method="post" name="account-form">
+      <h2 class="form__title">Аккаунт</h2>
+      <fieldset class="form__fieldset">
+        <label class="form__label" for="phone-number">Номер телефона</label>
+        <input class="form__input" id="phone-number" name="phone-number" placeholder="+7 123 456 78 90" type="tel">
+        <label class="form__label" for="email">Email</label>
+        <input class="form__input form__input_type_edit" id="email" name="email" type="email">
+        <label class="form__label" for="password">Пароль</label>
+        <input class="form__input form__input_type_edit" id="password" name="password" type="password">
+        <button class="form__submit-btn form__submit-btn_submitted" disabled type="submit">Сохранить&nbsp;изменения
+        </button>
+      </fieldset>
+    </form>
+
+    <div class="text-tips text-tips_place_account">
+      <p class="text-tips__paragraph">
+        Номер телефона используется как&nbsp;уникальный идентификатор
+        пользователя, поэтому его нельзя поменять вручную
+      </p>
+      <p class="text-tips__paragraph">
+        Если по какой-то причине у&nbsp;вас&nbsp;нет доступа к номеру телефона,
+        на который вы&nbsp;регистрировали аккаунт, напишите в поддержку
+      </p>
+      <p class="text-tips__paragraph">Email нужен для восстановления пароля</p>
+    </div>
+  </main>
+  <script src="./scripts/profile.js"></script>
+</body>
+</html>

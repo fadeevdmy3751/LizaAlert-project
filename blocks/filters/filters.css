@@ -1,0 +1,6 @@
+.filters {
+  grid-area: filters;
+  max-width: 312px;
+  margin: 0;
+}
+

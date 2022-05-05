@@ -1,0 +1,8 @@
+.text-tips__paragraph {
+  margin: 0;
+  text-align: left;
+}
+
+.text-tips__paragraph:not(:first-child) {
+  margin-top: 18px;
+}

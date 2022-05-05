@@ -1,0 +1,51 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/page-title/page-title.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__nav/header__nav.css);
+@import url(../blocks/header/__nav-links/header__nav-links.css);
+@import url(../blocks/header/__nav-link/header__nav-link.css);
+@import url(../blocks/header/__nav-link/_active/header__nav-link_active.css);
+
+@import url(../blocks/main-content/main-content.css);
+@import url(../blocks/main-content/__index/main-content__index.css);
+@import url(../blocks/page-title/page-title.css);
+@import url(../blocks/filters/filters.css);
+@import url(../blocks/filters/__container/filters__container.css);
+@import url(../blocks/filters/__heading/filters__heading.css);
+@import url(../blocks/filters/__remove/filters__remove.css);
+@import url(../blocks/filters/__category/filters__category.css);
+@import url(../blocks/filters/__category/_active/filters__category_active.css);
+@import url(../blocks/filters/__list/filters__list.css);
+@import url(../blocks/filters/__item/filters__item.css);
+@import url(../blocks/filters/__input/filters__input.css);
+@import url(../blocks/filters/__label/filters__label.css);
+@import url(../blocks/filters/__label/_active/filters__label_active.css);
+
+@import url(../blocks/hide/hide.css);
+
+@import url(../blocks/tags/tags.css);
+@import url(../blocks/tag/tag.css);
+@import url(../blocks/tag/_place_card/tag_place_card.css);
+@import url(../blocks/tag/__delete/tag__delete.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/cards-list/cards-list.css);
+@import url(../blocks/card/__title/card__title.css);
+@import url(../blocks/card/__image/card__image.css);
+@import url(../blocks/card/__texts/card__texts.css);
+@import url(../blocks/card/__description/card__description.css);
+@import url(../blocks/card/__options/card__options.css);
+@import url(../blocks/card/__lessons-info/card__lessons-info.css);
+@import url(../blocks/card/__icon/card__icon.css);
+@import url(../blocks/card/__paragraph/card__paragraph.css);
+@import url(../blocks/card/__lessons/card__lessons.css);
+@import url(../blocks/card/__clock-info/card__clock-info.css);
+@import url(../blocks/card/__clock/card__clock.css);
+@import url(../blocks/card/__button/card__button.css);
+@import url(../blocks/card/__button/_style/card__button_style_available.css);
+@import url(../blocks/card/__button/_style/card__button_style_completed.css);
+@import url(../blocks/card/__button/_style/card__button_style_inProgress.css);
+

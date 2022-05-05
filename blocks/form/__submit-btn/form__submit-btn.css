@@ -1,0 +1,20 @@
+.form__submit-btn {
+  max-width: 246px;
+  width: 100%;
+  padding: 12px 24px;
+  align-self: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  border: none;
+  box-shadow: 0 0 4px rgba(231, 232, 235, 0.6), 0 4px 16px rgba(231, 232, 235, 0.6);
+  border-radius: 16px;
+  transition: .4s;
+  background-color: #FF6600;
+  color: #fff;
+}
+
+.form__submit-btn:hover {
+  cursor: pointer;
+  opacity: .7;
+}

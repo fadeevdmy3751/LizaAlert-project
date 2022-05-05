@@ -1,0 +1,5 @@
+.main-content__index {
+  grid-template-areas:
+    "page-title ."
+    "filters cards-list"
+}

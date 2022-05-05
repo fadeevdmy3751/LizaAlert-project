@@ -1,0 +1,10 @@
+.card {
+  width: 984px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px rgba(231, 232, 235, 0.6), 0 4px 16px rgba(231, 232, 235, 0.6);
+  border-radius: 16px;
+}

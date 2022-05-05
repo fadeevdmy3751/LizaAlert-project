@@ -1,0 +1,31 @@
+.filters__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filters__input + .filters__label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.filters__input + .filters__label::before {
+  content: url(../../../images/check-box.svg);
+  margin-right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.filters__input:checked + .filters__label::before {
+  content: url(../../../images/check.svg);
+}
+
+.filters__input:checked + .filters__label {
+  color: #F06000;
+}
+
+
+

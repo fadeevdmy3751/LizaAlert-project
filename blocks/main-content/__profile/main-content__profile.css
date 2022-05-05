@@ -1,0 +1,7 @@
+.main-content__profile {
+  grid-template-areas:
+    "page-title . ."
+    "profile-account profile-data profile-text-personal-data"
+    ". account-data profile-text-account";
+  grid-template-columns: 312px 648px auto;
+}

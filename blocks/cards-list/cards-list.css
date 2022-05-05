@@ -1,0 +1,7 @@
+.cards-list {
+  grid-area: cards-list;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+

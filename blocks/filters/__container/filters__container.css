@@ -1,0 +1,13 @@
+.filters__container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px rgba(231, 232, 235, 0.6), 0 4px 16px rgba(231, 232, 235, 0.6);
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
